@@ -8,6 +8,7 @@
 #import "NSObject+YDForwarding.h"
 #import "NSObject+YDAvoidCrashRunTime.h"
 #import "YDAvoidCrash.h"
+#import "YDUnrecognizedSelectorSolveObject.h"
 
 @implementation NSObject (YDForwarding)
 
@@ -30,7 +31,7 @@
      */
     BOOL isEnable = NO;
     
-    for (NSString *prefixString in [YDAvoidCrash getEnableMethodPrefixList]) {
+    for (NSString *prefixString in [YDAvoidCrash getAvoidCrashEnableMethodPrefixList]) {
         if ([selString rangeOfString:prefixString].length > 0) {
             isEnable = YES;
         }
@@ -39,39 +40,39 @@
     return isEnable;
 }
 
-//- (NSMethodSignature *)newMethodSignatureForSelector:(SEL)sel{
-//    
-//    NSMethodSignature *signature = [self newMethodSignatureForSelector:sel];
-//    if (![self enableMethod]) {
-//        return signature;
-//    }
-//    if (signature != nil) {
-//        return signature;
-//    }
-//    
-//    NSException *exception = [NSException exceptionWithName:@"unrecognized selector(会有系统处理过的，部分情况可以忽略)" reason:[NSString stringWithFormat:@"[%@ %@]",[self class],NSStringFromSelector(sel)] userInfo:@{}];
-//    [AvoidCrash noteErrorWithException:exception defaultToDo:@"动态添加方法，并返回nil"];
-//    //可以在此加入日志信息，栈信息的获取等，方便后面分析和改进原来的代码。
-//    SLVUnrecognizedSelectorSolveObject *unrecognizedSelectorSolveObject = [SLVUnrecognizedSelectorSolveObject sharedInstance];
-//    return [unrecognizedSelectorSolveObject newMethodSignatureForSelector:sel];
-//}
+- (NSMethodSignature *)newMethodSignatureForSelector:(SEL)sel{
+    
+    NSMethodSignature *signature = [self newMethodSignatureForSelector:sel];
+    if (![self enableMethod]) {
+        return signature;
+    }
+    if (signature != nil) {
+        return signature;
+    }
+    
+    NSException *exception = [NSException exceptionWithName:@"unrecognized selector(会有系统处理过的，部分情况可以忽略)" reason:[NSString stringWithFormat:@"[%@ %@]",[self class],NSStringFromSelector(sel)] userInfo:@{}];
+    [YDAvoidCrash noteErrorWithException:exception defaultToDo:@"动态添加方法，并返回nil"];
+    //可以在此加入日志信息，栈信息的获取等，方便后面分析和改进原来的代码。
+    YDUnrecognizedSelectorSolveObject *unrecognizedSelectorSolveObject = [YDUnrecognizedSelectorSolveObject sharedInstance];
+    return [unrecognizedSelectorSolveObject newMethodSignatureForSelector:sel];
+}
 
 
-//- (void)newForwardInvocation:(NSInvocation *)anInvocation{
-//    
-//    if (![self enableMethod]) {
-//        [self newForwardInvocation:anInvocation];
-//        return;
-//    }
-//    
-//    if([self newMethodSignatureForSelector:anInvocation.selector]){
-//        [self newForwardInvocation:anInvocation];
-//        return;
-//    }
-//    SLVUnrecognizedSelectorSolveObject *unrecognizedSelectorSolveObject = [SLVUnrecognizedSelectorSolveObject sharedInstance];
-//    if([self methodSignatureForSelector:anInvocation.selector]){
-//        [anInvocation invokeWithTarget:unrecognizedSelectorSolveObject];
-//    }
-//}
+- (void)newForwardInvocation:(NSInvocation *)anInvocation{
+    
+    if (![self enableMethod]) {
+        [self newForwardInvocation:anInvocation];
+        return;
+    }
+    
+    if([self newMethodSignatureForSelector:anInvocation.selector]){
+        [self newForwardInvocation:anInvocation];
+        return;
+    }
+    YDUnrecognizedSelectorSolveObject *unrecognizedSelectorSolveObject = [YDUnrecognizedSelectorSolveObject sharedInstance];
+    if([self methodSignatureForSelector:anInvocation.selector]){
+        [anInvocation invokeWithTarget:unrecognizedSelectorSolveObject];
+    }
+}
 
 @end

@@ -45,9 +45,9 @@
  * 一般出现找不到方法，多数是 服务端返回数据类型问题导致的, NSNUll NSArray  NSString NSDictionary 所以拦截 NS开头 和一些确定类开头的，如@[@"NS", @"YD"]; 防止拦截其它造成一些问题。（已知键盘弹起）,开启前设置
  *
  */
-+ (void)setEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList;
++ (void)setAvoidCrashEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList;
 
-+ (NSArray *)getEnableMethodPrefixList;
++ (NSArray *)getAvoidCrashEnableMethodPrefixList;
 
 
 /**

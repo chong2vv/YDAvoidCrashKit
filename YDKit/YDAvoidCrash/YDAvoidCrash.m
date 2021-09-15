@@ -8,6 +8,9 @@
 #import "YDAvoidCrash.h"
 #import <UIKit/UIKit.h>
 #import "YDUnrecognizedSelectorSolveObject.h"
+#import "NSObject+YDForwarding.h"
+#import "NSObject+YDAvoidCrash.h"
+#import "NSObject+YDAvoidCrashRunTime.h"
 
 #define AvoidCrashSeparator         @"================================================================"
 #define AvoidCrashSeparatorWithFlag @"========================AvoidCrash Log=========================="
@@ -29,7 +32,7 @@ static void(^YDAvoidCrashBlock)(NSException *exception,NSString *defaultToDo,BOO
 @end
 
 @implementation YDAvoidCrash
-
+static NSArray *_enableMethodPrefixList = nil;
 /**
  * 设置信息回掉收集
  */
@@ -46,32 +49,48 @@ static void(^YDAvoidCrashBlock)(NSException *exception,NSString *defaultToDo,BOO
             return;
         }
         
-//        [NSObject avoidCrashForwardingExchangeMethod];
-//        YDAvoidCrash * avoidCrash = [YDAvoidCrash new];
-//        __block BOOL openAvoidCrash = YES;
-//        [openavoidcrash enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            if ([obj rangeOfString:@"avoidCrash_"].length > 0) {
-//                openAvoidCrash = NO;
-//                SEL sel = NSSelectorFromString(obj);
-//                if ([avoidCrash respondsToSelector:sel]) {
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-//                    [avoidCrash performSelector:sel];
-//#pragma clang diagnostic pop
-//                }
-//            }else {
-//                Class voidCrashClass = NSClassFromString(obj);
-//                [voidCrashClass avoidCrashExchangeMethod];
-//            }
-//        }];
-//        
-//        if (openAvoidCrash) {
-//            [avoidCrash avoidCrashEffective];
-//        }
-//        
+        [NSObject avoidCrashForwardingExchangeMethod];
+        YDAvoidCrash * avoidCrash = [YDAvoidCrash new];
+        __block BOOL openAvoidCrash = YES;
+        [openavoidcrash enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj rangeOfString:@"avoidCrash_"].length > 0) {
+                openAvoidCrash = NO;
+                SEL sel = NSSelectorFromString(obj);
+                if ([avoidCrash respondsToSelector:sel]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                    [avoidCrash performSelector:sel];
+#pragma clang diagnostic pop
+                }
+            }else {
+                Class voidCrashClass = NSClassFromString(obj);
+                [voidCrashClass avoidCrashExchangeMethod];
+            }
+        }];
+        
+        if (openAvoidCrash) {
+            [avoidCrash avoidCrashEffective];
+        }
+        
     });
 }
 
++ (void)becomeAllEffective {
+    
+    
+    [[YDAvoidCrash new] avoidCrashEffective];
+}
+
+- (void)avoidCrashEffective {
+    NSArray<NSString *> * list = [self getAvoidCrashMethodByListPrefix:@"avoidCrash_"];
+    [list enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        SEL sel = NSSelectorFromString(obj);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self performSelector:sel];
+#pragma clang diagnostic pop
+    }];
+}
 
 /**
  *  提示崩溃的信息(控制台输出、通知)
@@ -199,15 +218,24 @@ static void(^YDAvoidCrashBlock)(NSException *exception,NSString *defaultToDo,BOO
     return mainCallStackSymbolMsg;
 }
 
-
-+ (void)setEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList {
-    YDAvoidCrash.enableMethodPrefixList = [enableMethodPrefixList copy];
++ (NSArray<NSString *> *)enableMethodPrefixList {
+    if (_enableMethodPrefixList == nil) {
+        _enableMethodPrefixList = @[@"NS"];
+    }
+    return _enableMethodPrefixList;
 }
 
-+ (NSArray *)getEnableMethodPrefixList {
-    if (YDAvoidCrash.enableMethodPrefixList.count == 0) {
-        YDAvoidCrash.enableMethodPrefixList = @[@"NS"];
++ (void)setEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList {
+    if (enableMethodPrefixList != _enableMethodPrefixList) {
+        _enableMethodPrefixList = [enableMethodPrefixList copy];
     }
+}
+
++ (void)setAvoidCrashEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList{
+    YDAvoidCrash.enableMethodPrefixList = enableMethodPrefixList;
+}
+
++ (NSArray *)getAvoidCrashEnableMethodPrefixList {
     return YDAvoidCrash.enableMethodPrefixList;
 }
 

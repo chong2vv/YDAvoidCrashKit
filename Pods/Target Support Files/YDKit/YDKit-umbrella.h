@@ -12,6 +12,7 @@
 
 #import "YDKit.h"
 #import "YDAvoidCrash.h"
+#import "NSObject+YDAvoidCrash.h"
 #import "NSString+YDAvoidCrash.h"
 #import "NSObject+YDAvoidCrashRunTime.h"
 #import "NSObject+YDForwarding.h"

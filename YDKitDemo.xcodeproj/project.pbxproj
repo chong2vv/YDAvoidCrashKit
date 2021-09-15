@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1534C4C926F2500300020923 /* NSObject+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1534C4C826F2500300020923 /* NSObject+YDAvoidCrash.m */; };
 		1574FE0326F20E520046F07F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0226F20E520046F07F /* AppDelegate.m */; };
 		1574FE0626F20E520046F07F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0526F20E520046F07F /* SceneDelegate.m */; };
 		1574FE0926F20E520046F07F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0826F20E520046F07F /* ViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1534C4C726F2500300020923 /* NSObject+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1534C4C826F2500300020923 /* NSObject+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YDAvoidCrash.m"; sourceTree = "<group>"; };
 		1574FDFE26F20E520046F07F /* YDKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE0126F20E520046F07F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1574FE0226F20E520046F07F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 			children = (
 				1574FE4226F212710046F07F /* NSString+YDAvoidCrash.h */,
 				1574FE4326F212710046F07F /* NSString+YDAvoidCrash.m */,
+				1534C4C726F2500300020923 /* NSObject+YDAvoidCrash.h */,
+				1534C4C826F2500300020923 /* NSObject+YDAvoidCrash.m */,
 			);
 			path = YDAvoidCrashCategory;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				1574FE4B26F219790046F07F /* NSObject+YDForwarding.m in Sources */,
 				1574FE0326F20E520046F07F /* AppDelegate.m in Sources */,
 				1574FE4726F214C60046F07F /* NSObject+YDAvoidCrashRunTime.m in Sources */,
+				1534C4C926F2500300020923 /* NSObject+YDAvoidCrash.m in Sources */,
 				1574FE4026F210FB0046F07F /* YDAvoidCrash.m in Sources */,
 				1574FE1426F20E550046F07F /* main.m in Sources */,
 				1574FE4426F212710046F07F /* NSString+YDAvoidCrash.m in Sources */,
