@@ -1,0 +1,6 @@
+framework module YDKit {
+  umbrella header "YDKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

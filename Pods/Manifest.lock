@@ -1,0 +1,16 @@
+PODS:
+  - YDKit (0.0.1)
+
+DEPENDENCIES:
+  - YDKit (from `./YDKit.podspec`)
+
+EXTERNAL SOURCES:
+  YDKit:
+    :path: "./YDKit.podspec"
+
+SPEC CHECKSUMS:
+  YDKit: 9a6b2461853ad77ff87b35c21b67abbedc2889bc
+
+PODFILE CHECKSUM: 16eaa2a5f70199b60ac55497a9489a8917b8c381
+
+COCOAPODS: 1.10.0
