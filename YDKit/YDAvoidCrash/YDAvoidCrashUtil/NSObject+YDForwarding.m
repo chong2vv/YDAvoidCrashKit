@@ -29,15 +29,14 @@
      * 一般出现找不到方法，多数是 服务端返回数据类型问题导致的, NSNUll  NSArray NSString NSDictionary 所以拦截 NS开头。 防止拦截其它造成一些问题。（已知键盘弹起）
      *
      */
-    BOOL isEnable = NO;
     
     for (NSString *prefixString in [YDAvoidCrash getAvoidCrashEnableMethodPrefixList]) {
         if ([selString rangeOfString:prefixString].length > 0) {
-            isEnable = YES;
+            return YES;
         }
     }
     
-    return isEnable;
+    return NO;
 }
 
 - (NSMethodSignature *)newMethodSignatureForSelector:(SEL)sel{

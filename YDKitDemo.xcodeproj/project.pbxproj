@@ -23,6 +23,19 @@
 		1574FE4726F214C60046F07F /* NSObject+YDAvoidCrashRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE4626F214C60046F07F /* NSObject+YDAvoidCrashRunTime.m */; };
 		1574FE4B26F219790046F07F /* NSObject+YDForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE4A26F219790046F07F /* NSObject+YDForwarding.m */; };
 		1574FE4E26F2259D0046F07F /* YDUnrecognizedSelectorSolveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE4D26F2259D0046F07F /* YDUnrecognizedSelectorSolveObject.m */; };
+		1574FE6C26F2E8500046F07F /* CALayer+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE6B26F2E8500046F07F /* CALayer+YDAvoidCrash.m */; };
+		1574FE6F26F2EBCF0046F07F /* NSArray+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE6E26F2EBCF0046F07F /* NSArray+YDAvoidCrash.m */; };
+		1574FE7226F2F3E60046F07F /* NSMutableArray+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE7126F2F3E60046F07F /* NSMutableArray+YDAvoidCrash.m */; };
+		1574FE7526F2F4880046F07F /* NSAttributedString+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE7426F2F4880046F07F /* NSAttributedString+YDAvoidCrash.m */; };
+		1574FE7826F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE7726F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.m */; };
+		1574FE7B26F319200046F07F /* NSDictionary+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE7A26F319200046F07F /* NSDictionary+YDAvoidCrash.m */; };
+		1574FE7E26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE7D26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.m */; };
+		1574FE8126F320890046F07F /* NSSet+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8026F320890046F07F /* NSSet+YDAvoidCrash.m */; };
+		1574FE8426F3210A0046F07F /* NSMutableSet+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8326F3210A0046F07F /* NSMutableSet+YDAvoidCrash.m */; };
+		1574FE8726F321A60046F07F /* NSOrderedSet+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8626F321A60046F07F /* NSOrderedSet+YDAvoidCrash.m */; };
+		1574FE8A26F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8926F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.m */; };
+		1574FE8D26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8C26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.m */; };
+		1574FE9026F325ED0046F07F /* UIView+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE8F26F325ED0046F07F /* UIView+YDAvoidCrash.m */; };
 		EA5B0DA2E393F0650FBD9884 /* Pods_YDKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56352439477D05EEE2282D0 /* Pods_YDKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +89,32 @@
 		1574FE4A26F219790046F07F /* NSObject+YDForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YDForwarding.m"; sourceTree = "<group>"; };
 		1574FE4C26F2259D0046F07F /* YDUnrecognizedSelectorSolveObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDUnrecognizedSelectorSolveObject.h; sourceTree = "<group>"; };
 		1574FE4D26F2259D0046F07F /* YDUnrecognizedSelectorSolveObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDUnrecognizedSelectorSolveObject.m; sourceTree = "<group>"; };
+		1574FE6A26F2E8500046F07F /* CALayer+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE6B26F2E8500046F07F /* CALayer+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE6D26F2EBCF0046F07F /* NSArray+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE6E26F2EBCF0046F07F /* NSArray+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7026F2F3E50046F07F /* NSMutableArray+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE7126F2F3E60046F07F /* NSMutableArray+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7326F2F4880046F07F /* NSAttributedString+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE7426F2F4880046F07F /* NSAttributedString+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7626F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE7726F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7926F319200046F07F /* NSDictionary+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE7A26F319200046F07F /* NSDictionary+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7C26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE7D26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE7F26F320890046F07F /* NSSet+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSet+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8026F320890046F07F /* NSSet+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSet+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE8226F3210A0046F07F /* NSMutableSet+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8326F3210A0046F07F /* NSMutableSet+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE8526F321A60046F07F /* NSOrderedSet+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOrderedSet+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8626F321A60046F07F /* NSOrderedSet+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSOrderedSet+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE8826F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableOrderedSet+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8926F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableOrderedSet+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE8B26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8C26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		1574FE8E26F325ED0046F07F /* UIView+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		1574FE8F26F325ED0046F07F /* UIView+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YDAvoidCrash.m"; sourceTree = "<group>"; };
 		2338C601B694B88582620083 /* Pods-YDKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.release.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A56352439477D05EEE2282D0 /* Pods_YDKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B644E9BB037868289B866F80 /* Pods-YDKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +233,32 @@
 			children = (
 				1574FE4226F212710046F07F /* NSString+YDAvoidCrash.h */,
 				1574FE4326F212710046F07F /* NSString+YDAvoidCrash.m */,
+				1574FE7326F2F4880046F07F /* NSAttributedString+YDAvoidCrash.h */,
+				1574FE7426F2F4880046F07F /* NSAttributedString+YDAvoidCrash.m */,
+				1574FE7626F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.h */,
+				1574FE7726F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.m */,
+				1574FE6D26F2EBCF0046F07F /* NSArray+YDAvoidCrash.h */,
+				1574FE6E26F2EBCF0046F07F /* NSArray+YDAvoidCrash.m */,
+				1574FE7026F2F3E50046F07F /* NSMutableArray+YDAvoidCrash.h */,
+				1574FE7126F2F3E60046F07F /* NSMutableArray+YDAvoidCrash.m */,
+				1574FE7926F319200046F07F /* NSDictionary+YDAvoidCrash.h */,
+				1574FE7A26F319200046F07F /* NSDictionary+YDAvoidCrash.m */,
+				1574FE7C26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.h */,
+				1574FE7D26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.m */,
+				1574FE7F26F320890046F07F /* NSSet+YDAvoidCrash.h */,
+				1574FE8026F320890046F07F /* NSSet+YDAvoidCrash.m */,
+				1574FE8226F3210A0046F07F /* NSMutableSet+YDAvoidCrash.h */,
+				1574FE8326F3210A0046F07F /* NSMutableSet+YDAvoidCrash.m */,
+				1574FE8526F321A60046F07F /* NSOrderedSet+YDAvoidCrash.h */,
+				1574FE8626F321A60046F07F /* NSOrderedSet+YDAvoidCrash.m */,
+				1574FE8826F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.h */,
+				1574FE8926F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.m */,
+				1574FE8B26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.h */,
+				1574FE8C26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.m */,
+				1574FE8E26F325ED0046F07F /* UIView+YDAvoidCrash.h */,
+				1574FE8F26F325ED0046F07F /* UIView+YDAvoidCrash.m */,
+				1574FE6A26F2E8500046F07F /* CALayer+YDAvoidCrash.h */,
+				1574FE6B26F2E8500046F07F /* CALayer+YDAvoidCrash.m */,
 				1534C4C726F2500300020923 /* NSObject+YDAvoidCrash.h */,
 				1534C4C826F2500300020923 /* NSObject+YDAvoidCrash.m */,
 			);
@@ -402,17 +467,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1574FE8726F321A60046F07F /* NSOrderedSet+YDAvoidCrash.m in Sources */,
+				1574FE7526F2F4880046F07F /* NSAttributedString+YDAvoidCrash.m in Sources */,
+				1574FE7226F2F3E60046F07F /* NSMutableArray+YDAvoidCrash.m in Sources */,
 				1574FE0926F20E520046F07F /* ViewController.m in Sources */,
 				1574FE4B26F219790046F07F /* NSObject+YDForwarding.m in Sources */,
+				1574FE7E26F31F2D0046F07F /* NSMutableDictionary+YDAvoidCrash.m in Sources */,
 				1574FE0326F20E520046F07F /* AppDelegate.m in Sources */,
 				1574FE4726F214C60046F07F /* NSObject+YDAvoidCrashRunTime.m in Sources */,
+				1574FE6F26F2EBCF0046F07F /* NSArray+YDAvoidCrash.m in Sources */,
 				1534C4C926F2500300020923 /* NSObject+YDAvoidCrash.m in Sources */,
 				1574FE4026F210FB0046F07F /* YDAvoidCrash.m in Sources */,
+				1574FE7826F2F53B0046F07F /* NSMutableAttributedString+YDAvoidCrash.m in Sources */,
+				1574FE7B26F319200046F07F /* NSDictionary+YDAvoidCrash.m in Sources */,
 				1574FE1426F20E550046F07F /* main.m in Sources */,
+				1574FE8D26F322C40046F07F /* NSUserDefaults+YDAvoidCrash.m in Sources */,
 				1574FE4426F212710046F07F /* NSString+YDAvoidCrash.m in Sources */,
 				1574FE4E26F2259D0046F07F /* YDUnrecognizedSelectorSolveObject.m in Sources */,
 				1574FE3A26F20F950046F07F /* YDKit.m in Sources */,
+				1574FE6C26F2E8500046F07F /* CALayer+YDAvoidCrash.m in Sources */,
+				1574FE8426F3210A0046F07F /* NSMutableSet+YDAvoidCrash.m in Sources */,
+				1574FE8126F320890046F07F /* NSSet+YDAvoidCrash.m in Sources */,
+				1574FE9026F325ED0046F07F /* UIView+YDAvoidCrash.m in Sources */,
 				1574FE0626F20E520046F07F /* SceneDelegate.m in Sources */,
+				1574FE8A26F322200046F07F /* NSMutableOrderedSet+YDAvoidCrash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
