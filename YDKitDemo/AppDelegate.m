@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 
+#import "YDKit.h"
+
 @interface AppDelegate ()
 
 @end
@@ -15,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    //接收异常的回调处理
+    [YDAvoidCrash setupBlock:^(NSException *exception, NSString *defaultToDo, BOOL upload) {
+            
+    }];
+    
+    [YDAvoidCrash becomeEffective:@[]];
     return YES;
 }
 

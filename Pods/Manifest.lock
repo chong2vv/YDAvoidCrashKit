@@ -1,16 +1,25 @@
 PODS:
-  - YDKit (0.0.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - YDKit (0.0.1):
+    - FMDB
 
 DEPENDENCIES:
   - YDKit (from `./YDKit.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
 
 EXTERNAL SOURCES:
   YDKit:
     :path: "./YDKit.podspec"
 
 SPEC CHECKSUMS:
-  YDKit: 9a6b2461853ad77ff87b35c21b67abbedc2889bc
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  YDKit: 1f8b2fb1897e3af2350ae1b0d003074a43d314ba
 
 PODFILE CHECKSUM: 16eaa2a5f70199b60ac55497a9489a8917b8c381
 
-COCOAPODS: 1.11.0.beta.2
+COCOAPODS: 1.10.0

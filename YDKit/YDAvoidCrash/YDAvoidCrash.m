@@ -77,6 +77,31 @@ static NSArray *_enableMethodPrefixList = nil;
 
 + (void)becomeAllEffective {
     
+    [NSObject avoidCrashForwardingExchangeMethod];
+    [NSObject avoidCrashExchangeMethod];
+    
+    [NSAttributedString avoidCrashExchangeMethod];
+    [NSMutableAttributedString avoidCrashExchangeMethod];
+    
+    [NSArray avoidCrashExchangeMethod];
+    [NSMutableArray avoidCrashExchangeMethod];
+
+    [NSDictionary avoidCrashExchangeMethod];
+    [NSMutableDictionary avoidCrashExchangeMethod];
+    
+    [NSSet avoidCrashExchangeMethod];
+    [NSMutableSet avoidCrashExchangeMethod];
+    
+    [NSOrderedSet avoidCrashExchangeMethod];
+    [NSMutableOrderedSet avoidCrashExchangeMethod];
+
+    [NSString avoidCrashExchangeMethod];
+    [NSMutableString avoidCrashExchangeMethod];
+
+    [NSUserDefaults avoidCrashExchangeMethod];
+
+    [UIView avoidCrashExchangeMethod];
+    [CALayer avoidCrashExchangeMethod];
     
     [[YDAvoidCrash new] avoidCrashEffective];
 }

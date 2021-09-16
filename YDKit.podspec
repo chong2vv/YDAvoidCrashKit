@@ -47,6 +47,9 @@ Pod::Spec.new do |spec|
   spec.frameworks = "Foundation", "UIKit"
 
 
+  spec.dependency "FMDB"
+
+
   # spec.public_header_files = "Classes/**/*.h"
 
 
@@ -80,6 +83,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+
 
 end
