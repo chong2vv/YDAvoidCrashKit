@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YDAvoidCrash/YDAvoidCrash.h"
+#import "YDAvoidCrash.h"
 
 //! Project version number for YDKit.
 FOUNDATION_EXPORT double YDKitVersionNumber;
