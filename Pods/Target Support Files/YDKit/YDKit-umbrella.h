@@ -30,6 +30,8 @@
 #import "NSObject+YDAvoidCrashRunTime.h"
 #import "NSObject+YDForwarding.h"
 #import "YDUnrecognizedSelectorSolveObject.h"
+#import "YDAvoidCrashModel.h"
+#import "YDAvoidDB.h"
 
 FOUNDATION_EXPORT double YDKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char YDKitVersionString[];
