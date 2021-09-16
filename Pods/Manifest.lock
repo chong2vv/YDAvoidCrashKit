@@ -6,7 +6,7 @@ PODS:
     - FMDB
 
 DEPENDENCIES:
-  - YDKit (from `./YDKit.podspec`)
+  - YDKit (from `./YDKit/YDKit.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -14,12 +14,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   YDKit:
-    :path: "./YDKit.podspec"
+    :path: "./YDKit/YDKit.podspec"
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   YDKit: 1f8b2fb1897e3af2350ae1b0d003074a43d314ba
 
-PODFILE CHECKSUM: 16eaa2a5f70199b60ac55497a9489a8917b8c381
+PODFILE CHECKSUM: e3b019f8ea063c5371d445cf2f4d7e21a44b3091
 
 COCOAPODS: 1.11.0.beta.2
