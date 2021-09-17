@@ -122,7 +122,7 @@
 		15CC3C1D26F43EF50089F133 /* YDAvoidDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDAvoidDB.m; sourceTree = "<group>"; };
 		15CC3C1E26F43EF50089F133 /* YDAvoidCrashModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDAvoidCrashModel.m; sourceTree = "<group>"; };
 		15CC3C1F26F43EF50089F133 /* YDAvoidDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDAvoidDB.h; sourceTree = "<group>"; };
-		15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YDAvoidCrashKit.podspec; sourceTree = "<group>"; };
+		15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YDAvoidCrashKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2338C601B694B88582620083 /* Pods-YDKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.release.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A56352439477D05EEE2282D0 /* Pods_YDKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B644E9BB037868289B866F80 /* Pods-YDKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,9 +218,9 @@
 			children = (
 				15CC3BEF26F43EF50089F133 /* YDAvoidCrash */,
 				15CC3C1826F43EF50089F133 /* YDMonitor */,
+				15CC3C1B26F43EF50089F133 /* YDFMDB */,
 				15CC3C1926F43EF50089F133 /* YDKit.h */,
 				15CC3C1A26F43EF50089F133 /* YDKit.m */,
-				15CC3C1B26F43EF50089F133 /* YDFMDB */,
 				15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */,
 			);
 			path = YDAvoidCrashKit;
@@ -229,12 +229,12 @@
 		15CC3BEF26F43EF50089F133 /* YDAvoidCrash */ = {
 			isa = PBXGroup;
 			children = (
+				15CC3BF726F43EF50089F133 /* YDAvoidCrash.h */,
 				15CC3BF026F43EF50089F133 /* YDAvoidCrash.m */,
 				15CC3BF126F43EF50089F133 /* YDUnrecognizedSelectorSolveObject.h */,
-				15CC3BF226F43EF50089F133 /* YDAvoidCrashUtil */,
-				15CC3BF726F43EF50089F133 /* YDAvoidCrash.h */,
-				15CC3BF826F43EF50089F133 /* YDAvoidCrashCategory */,
 				15CC3C1726F43EF50089F133 /* YDUnrecognizedSelectorSolveObject.m */,
+				15CC3BF226F43EF50089F133 /* YDAvoidCrashUtil */,
+				15CC3BF826F43EF50089F133 /* YDAvoidCrashCategory */,
 			);
 			path = YDAvoidCrash;
 			sourceTree = "<group>";
@@ -243,9 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				15CC3BF326F43EF50089F133 /* NSObject+YDForwarding.h */,
+				15CC3BF626F43EF50089F133 /* NSObject+YDForwarding.m */,
 				15CC3BF426F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.h */,
 				15CC3BF526F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.m */,
-				15CC3BF626F43EF50089F133 /* NSObject+YDForwarding.m */,
 			);
 			path = YDAvoidCrashUtil;
 			sourceTree = "<group>";
@@ -253,35 +253,35 @@
 		15CC3BF826F43EF50089F133 /* YDAvoidCrashCategory */ = {
 			isa = PBXGroup;
 			children = (
-				15CC3BF926F43EF50089F133 /* NSMutableOrderedSet+YDAvoidCrash.h */,
-				15CC3BFA26F43EF50089F133 /* NSUserDefaults+YDAvoidCrash.h */,
-				15CC3BFB26F43EF50089F133 /* NSMutableSet+YDAvoidCrash.h */,
-				15CC3BFC26F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.m */,
-				15CC3BFD26F43EF50089F133 /* NSMutableArray+YDAvoidCrash.h */,
-				15CC3BFE26F43EF50089F133 /* UIView+YDAvoidCrash.h */,
-				15CC3BFF26F43EF50089F133 /* NSSet+YDAvoidCrash.h */,
-				15CC3C0026F43EF50089F133 /* NSAttributedString+YDAvoidCrash.m */,
-				15CC3C0126F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.h */,
-				15CC3C0226F43EF50089F133 /* NSArray+YDAvoidCrash.m */,
-				15CC3C0326F43EF50089F133 /* NSString+YDAvoidCrash.h */,
-				15CC3C0426F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.m */,
-				15CC3C0526F43EF50089F133 /* CALayer+YDAvoidCrash.h */,
-				15CC3C0626F43EF50089F133 /* NSDictionary+YDAvoidCrash.m */,
 				15CC3C0726F43EF50089F133 /* NSObject+YDAvoidCrash.h */,
-				15CC3C0826F43EF50089F133 /* NSUserDefaults+YDAvoidCrash.m */,
-				15CC3C0926F43EF50089F133 /* NSMutableOrderedSet+YDAvoidCrash.m */,
-				15CC3C0A26F43EF50089F133 /* UIView+YDAvoidCrash.m */,
-				15CC3C0B26F43EF50089F133 /* NSMutableArray+YDAvoidCrash.m */,
-				15CC3C0C26F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.h */,
-				15CC3C0D26F43EF50089F133 /* NSMutableSet+YDAvoidCrash.m */,
-				15CC3C0E26F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.h */,
-				15CC3C0F26F43EF50089F133 /* NSString+YDAvoidCrash.m */,
-				15CC3C1026F43EF50089F133 /* NSArray+YDAvoidCrash.h */,
-				15CC3C1126F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.m */,
-				15CC3C1226F43EF50089F133 /* NSAttributedString+YDAvoidCrash.h */,
-				15CC3C1326F43EF50089F133 /* NSSet+YDAvoidCrash.m */,
 				15CC3C1426F43EF50089F133 /* NSObject+YDAvoidCrash.m */,
+				15CC3C0326F43EF50089F133 /* NSString+YDAvoidCrash.h */,
+				15CC3C0F26F43EF50089F133 /* NSString+YDAvoidCrash.m */,
+				15CC3C1226F43EF50089F133 /* NSAttributedString+YDAvoidCrash.h */,
+				15CC3C0026F43EF50089F133 /* NSAttributedString+YDAvoidCrash.m */,
+				15CC3C0E26F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.h */,
+				15CC3C0426F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.m */,
+				15CC3C1026F43EF50089F133 /* NSArray+YDAvoidCrash.h */,
+				15CC3C0226F43EF50089F133 /* NSArray+YDAvoidCrash.m */,
+				15CC3BFD26F43EF50089F133 /* NSMutableArray+YDAvoidCrash.h */,
+				15CC3C0B26F43EF50089F133 /* NSMutableArray+YDAvoidCrash.m */,
 				15CC3C1526F43EF50089F133 /* NSDictionary+YDAvoidCrash.h */,
+				15CC3C0626F43EF50089F133 /* NSDictionary+YDAvoidCrash.m */,
+				15CC3C0126F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.h */,
+				15CC3C1126F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.m */,
+				15CC3BFF26F43EF50089F133 /* NSSet+YDAvoidCrash.h */,
+				15CC3C1326F43EF50089F133 /* NSSet+YDAvoidCrash.m */,
+				15CC3BFB26F43EF50089F133 /* NSMutableSet+YDAvoidCrash.h */,
+				15CC3C0D26F43EF50089F133 /* NSMutableSet+YDAvoidCrash.m */,
+				15CC3C0C26F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.h */,
+				15CC3BFC26F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.m */,
+				15CC3BF926F43EF50089F133 /* NSMutableOrderedSet+YDAvoidCrash.h */,
+				15CC3C0926F43EF50089F133 /* NSMutableOrderedSet+YDAvoidCrash.m */,
+				15CC3BFA26F43EF50089F133 /* NSUserDefaults+YDAvoidCrash.h */,
+				15CC3C0826F43EF50089F133 /* NSUserDefaults+YDAvoidCrash.m */,
+				15CC3BFE26F43EF50089F133 /* UIView+YDAvoidCrash.h */,
+				15CC3C0A26F43EF50089F133 /* UIView+YDAvoidCrash.m */,
+				15CC3C0526F43EF50089F133 /* CALayer+YDAvoidCrash.h */,
 				15CC3C1626F43EF50089F133 /* CALayer+YDAvoidCrash.m */,
 			);
 			path = YDAvoidCrashCategory;
@@ -298,9 +298,9 @@
 			isa = PBXGroup;
 			children = (
 				15CC3C1C26F43EF50089F133 /* YDAvoidCrashModel.h */,
-				15CC3C1D26F43EF50089F133 /* YDAvoidDB.m */,
 				15CC3C1E26F43EF50089F133 /* YDAvoidCrashModel.m */,
 				15CC3C1F26F43EF50089F133 /* YDAvoidDB.h */,
+				15CC3C1D26F43EF50089F133 /* YDAvoidDB.m */,
 			);
 			path = YDFMDB;
 			sourceTree = "<group>";
