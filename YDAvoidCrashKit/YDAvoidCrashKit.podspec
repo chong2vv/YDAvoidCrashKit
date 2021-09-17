@@ -40,8 +40,8 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/chong2vv/YDKit.git", :tag => "#{spec.version}" }
 
-  spec.source_files = "YDKit/**/*.{h,m}","YDKit/*.{h,m}"
-  spec.public_header_files = "YDKit/*.h","YDKit/**/*.h", "YDKit/**/**/*.h"
+  spec.source_files = "YDAvoidCrashKit/**/*.{h,m}","YDAvoidCrashKit/*.{h,m}"
+  spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
 
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"

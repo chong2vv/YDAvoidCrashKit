@@ -2,24 +2,24 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - YDKit (0.0.1):
+  - YDAvoidCrashKit (0.0.1):
     - FMDB
 
 DEPENDENCIES:
-  - YDKit (from `./YDKit/YDKit.podspec`)
+  - YDAvoidCrashKit (from `./YDAvoidCrashKit/YDAvoidCrashKit.podspec`)
 
 SPEC REPOS:
   trunk:
     - FMDB
 
 EXTERNAL SOURCES:
-  YDKit:
-    :path: "./YDKit/YDKit.podspec"
+  YDAvoidCrashKit:
+    :path: "./YDAvoidCrashKit/YDAvoidCrashKit.podspec"
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  YDKit: 1f8b2fb1897e3af2350ae1b0d003074a43d314ba
+  YDAvoidCrashKit: 9463386d2acdd8fbefc3ba8fad419566e8ae3f6f
 
-PODFILE CHECKSUM: e3b019f8ea063c5371d445cf2f4d7e21a44b3091
+PODFILE CHECKSUM: 43db46e05a66ddd0718130387d5ee18d1d9ce72b
 
-COCOAPODS: 1.11.0.beta.2
+COCOAPODS: 1.10.0
