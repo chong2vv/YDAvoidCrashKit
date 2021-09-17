@@ -58,23 +58,23 @@ id autoAddMethod(id self, SEL _cmd) {
 //    //可以在此加入日志信息，栈信息的获取等，方便后面分析和改进原来的代码。
     
 #ifdef DEBUG
-    NSString *message = [NSString stringWithFormat:@"unrecognized selector: %@",NSStringFromSelector(_cmd)];
-    
-    if ([[YDUnrecognizedSelectorSolveObject sharedInstance] isOpenCallStack]) {
-        NSString *callStackMessage = [YDCallStack YDCallStackWithType:YDCallStackTypeCurrent];
-        NSDictionary *messageInfo = @{
-            @"selector_mesaage":message,
-            @"call_stack_message":callStackMessage
-        };
-        
-        NSLog(@"AvoidCrashInfo: ========== %@", messageInfo);
-        YDAvoidCrashModel *model = [[YDAvoidCrashModel alloc] init];
-        model.errorInfoDic = [NSString stringWithFormat:@"%@", messageInfo];
-        model.crashTime = [YDUnrecognizedSelectorSolveObject getCurrentTimes];
-        [[YDAvoidDB shareInstance] insertWithCrashModel:model];
-    }else {
-        NSLog(@"crash_sel: %@",message);
-    }
+//    NSString *message = [NSString stringWithFormat:@"unrecognized selector: %@",NSStringFromSelector(_cmd)];
+//    
+//    if ([[YDUnrecognizedSelectorSolveObject sharedInstance] isOpenCallStack]) {
+//        NSString *callStackMessage = [YDCallStack YDCallStackWithType:YDCallStackTypeCurrent];
+//        NSDictionary *messageInfo = @{
+//            @"selector_mesaage":message,
+//            @"call_stack_message":callStackMessage
+//        };
+//        
+//        NSLog(@"AvoidCrashInfo: ========== %@", messageInfo);
+//        YDAvoidCrashModel *model = [[YDAvoidCrashModel alloc] init];
+//        model.errorInfoDic = [NSString stringWithFormat:@"%@", messageInfo];
+//        model.crashTime = [YDUnrecognizedSelectorSolveObject getCurrentTimes];
+//        [[YDAvoidDB shareInstance] insertWithCrashModel:model];
+//    }else {
+//        NSLog(@"crash_sel: %@",message);
+//    }
     
 #endif
     

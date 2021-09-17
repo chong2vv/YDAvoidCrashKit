@@ -11,6 +11,7 @@
 #import "NSObject+YDForwarding.h"
 #import "NSObject+YDAvoidCrash.h"
 #import "NSObject+YDAvoidCrashRunTime.h"
+#import "YDAvoidDB.h"
 
 #define AvoidCrashSeparator         @"================================================================"
 #define AvoidCrashSeparatorWithFlag @"========================AvoidCrash Log=========================="
@@ -171,6 +172,12 @@ static NSArray *_enableMethodPrefixList = nil;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *message = [NSString stringWithFormat:@"%@",errorInfoDic];
+        
+        YDAvoidCrashModel *model = [[YDAvoidCrashModel alloc] init];
+        model.errorInfoDic = [NSString stringWithFormat:@"%@", message];
+        model.crashTime = [self getCurrentTimes];
+        [[YDAvoidDB shareInstance] insertWithCrashModel:model];
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"崩溃警告" message:message preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
@@ -190,6 +197,20 @@ static NSArray *_enableMethodPrefixList = nil;
         
     });
 #endif
+    
+}
+
++ (NSString*)getCurrentTimes{
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    
+    NSDate *datenow = [NSDate date];
+    
+    NSString *currentTimeString = [formatter stringFromDate:datenow];
+    
+    return currentTimeString;
     
 }
 

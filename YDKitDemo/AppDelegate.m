@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YDTestAction.h"
 #import "YDKit.h"
 
 @interface AppDelegate ()
@@ -18,12 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [YDAvoidCrash setAvoidCrashEnableMethodPrefixList:@[@"NS",@"YD"]];
     //接收异常的回调处理
     [YDAvoidCrash setupBlock:^(NSException *exception, NSString *defaultToDo, BOOL upload) {
             
     }];
     
-    [YDAvoidCrash becomeEffective:@[]];
+    [YDAvoidCrash becomeAllEffective];
+    
+    YDTestAction *testAction = [[YDTestAction alloc] init];
+    [testAction noAction];
+//    NSArray *array = @[@"1",@"2"];
+//    NSString *testStr = [array objectAtIndex:3];
+    
+    NSLog(@"ErrorDB === %@",[[YDAvoidDB shareInstance] selectAllCrashModel].firstObject.errorInfoDic);
+    
     return YES;
 }
 
