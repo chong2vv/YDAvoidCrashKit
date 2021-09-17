@@ -18,7 +18,7 @@
 
 + (YDAvoidDB *)shareInstance;
 - (void)insertWithCrashModel:(YDAvoidCrashModel *)model; //插入Crash
-- (NSArray *)selectAllCrashModel; //读取所有Crash信息
+- (NSArray<YDAvoidCrashModel *> *)selectAllCrashModel; //读取所有Crash信息
 - (void)clearAllDB;
 @end
 

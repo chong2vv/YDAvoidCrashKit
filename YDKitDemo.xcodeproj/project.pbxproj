@@ -39,6 +39,8 @@
 		15CC3C3526F43EF50089F133 /* YDAvoidDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3C1D26F43EF50089F133 /* YDAvoidDB.m */; };
 		15CC3C3626F43EF50089F133 /* YDAvoidCrashModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3C1E26F43EF50089F133 /* YDAvoidCrashModel.m */; };
 		15CC3C3726F43EF50089F133 /* YDAvoidCrashKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */; };
+		15CC3C3A26F442BB0089F133 /* YDCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3C3926F442BB0089F133 /* YDCallStack.m */; };
+		15CC3C3D26F444310089F133 /* YDCallStackLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3C3C26F444310089F133 /* YDCallStackLib.m */; };
 		EA5B0DA2E393F0650FBD9884 /* Pods_YDKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56352439477D05EEE2282D0 /* Pods_YDKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,10 @@
 		15CC3C1E26F43EF50089F133 /* YDAvoidCrashModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDAvoidCrashModel.m; sourceTree = "<group>"; };
 		15CC3C1F26F43EF50089F133 /* YDAvoidDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDAvoidDB.h; sourceTree = "<group>"; };
 		15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YDAvoidCrashKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		15CC3C3826F442BB0089F133 /* YDCallStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDCallStack.h; sourceTree = "<group>"; };
+		15CC3C3926F442BB0089F133 /* YDCallStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDCallStack.m; sourceTree = "<group>"; };
+		15CC3C3B26F444310089F133 /* YDCallStackLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDCallStackLib.h; sourceTree = "<group>"; };
+		15CC3C3C26F444310089F133 /* YDCallStackLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDCallStackLib.m; sourceTree = "<group>"; };
 		2338C601B694B88582620083 /* Pods-YDKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.release.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A56352439477D05EEE2282D0 /* Pods_YDKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B644E9BB037868289B866F80 /* Pods-YDKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +296,10 @@
 		15CC3C1826F43EF50089F133 /* YDMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				15CC3C3826F442BB0089F133 /* YDCallStack.h */,
+				15CC3C3926F442BB0089F133 /* YDCallStack.m */,
+				15CC3C3B26F444310089F133 /* YDCallStackLib.h */,
+				15CC3C3C26F444310089F133 /* YDCallStackLib.m */,
 			);
 			path = YDMonitor;
 			sourceTree = "<group>";
@@ -514,8 +524,10 @@
 				15CC3C2F26F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.m in Sources */,
 				15CC3C2226F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.m in Sources */,
 				15CC3C2426F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.m in Sources */,
+				15CC3C3D26F444310089F133 /* YDCallStackLib.m in Sources */,
 				15CC3C3426F43EF50089F133 /* YDKit.m in Sources */,
 				1574FE0626F20E520046F07F /* SceneDelegate.m in Sources */,
+				15CC3C3A26F442BB0089F133 /* YDCallStack.m in Sources */,
 				15CC3C2E26F43EF50089F133 /* NSString+YDAvoidCrash.m in Sources */,
 				15CC3C2526F43EF50089F133 /* NSAttributedString+YDAvoidCrash.m in Sources */,
 				15CC3C2126F43EF50089F133 /* YDAvoidCrash.m in Sources */,

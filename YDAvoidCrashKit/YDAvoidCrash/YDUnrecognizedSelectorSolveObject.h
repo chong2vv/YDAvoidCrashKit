@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype) sharedInstance;
 
+- (void)openCallStack:(BOOL)isOpen;
+
 @end
 
 NS_ASSUME_NONNULL_END

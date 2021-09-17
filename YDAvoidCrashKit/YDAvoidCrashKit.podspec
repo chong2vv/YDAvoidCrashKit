@@ -20,15 +20,6 @@ Pod::Spec.new do |spec|
   spec.summary      = "防崩溃、性能检测等"
 
   spec.homepage     = "https://github.com/chong2vv/YDKit"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
-
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See https://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
 
   spec.license      = "MIT"
 

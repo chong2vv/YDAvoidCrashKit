@@ -48,7 +48,7 @@
     }
 }
 
-- (NSArray *)selectAllCrashModel {
+- (NSArray<YDAvoidCrashModel *> *)selectAllCrashModel {
     NSMutableArray *crashInfoArray = [NSMutableArray array];
     FMDatabase *db = [FMDatabase databaseWithPath:self.crashDBPath];
     if ([db open]) {
