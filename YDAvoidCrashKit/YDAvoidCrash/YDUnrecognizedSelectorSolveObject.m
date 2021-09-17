@@ -23,6 +23,7 @@
     static dispatch_once_t  once_token;
     dispatch_once(&once_token, ^{
         unrecognizedSelectorSolveObject = [[YDUnrecognizedSelectorSolveObject alloc] init];
+        unrecognizedSelectorSolveObject.isOpenCallStack = YES;
     });
     return unrecognizedSelectorSolveObject;
 }

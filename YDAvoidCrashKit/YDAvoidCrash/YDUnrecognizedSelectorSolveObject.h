@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype) sharedInstance;
 
+//是否开启出错堆栈信息及本地保存，默认开启
 - (void)openCallStack:(BOOL)isOpen;
 
 @end
