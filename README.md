@@ -36,4 +36,4 @@ pod 'YDKit', '0.0.2'
 ```
 + (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash
 ```
-进行动态拦截。
+进行动态配置拦截。
