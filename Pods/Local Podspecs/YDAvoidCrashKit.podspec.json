@@ -1,6 +1,6 @@
 {
   "name": "YDAvoidCrashKit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "防崩溃、性能检测等",
   "homepage": "https://github.com/chong2vv/YDKit",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/chong2vv/YDKit.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": [
     "YDAvoidCrashKit/**/*.{h,m}",
@@ -32,5 +32,15 @@
     "FMDB": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "YDLogger",
+      "libraries": "c++",
+      "source_files": "YDAvoidCrashKit/YDLogger/*",
+      "xcconfig": {
+        "GCC_PREPROCESSOR_DEFINITIONS": "ARTLOGGERHYLOG=1"
+      }
+    }
+  ]
 }

@@ -5,9 +5,9 @@
 //  Created by wangyuandong on 2021/9/15.
 //
 
-#import "YDKit.h"
+#import "YDAvoidCrashKit.h"
 
-@implementation YDKit
+@implementation YDAvoidCrashKit
 
 + (NSBundle *)bundle {
     static NSBundle* bundle = nil;

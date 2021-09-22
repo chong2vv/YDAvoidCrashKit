@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "YDAvoidCrashModel.h"
 
 /**
  *  if you want to get the reason that can cause crash, you can add observer notification in AppDelegate.
@@ -47,11 +47,14 @@
  */
 + (void)setAvoidCrashEnableMethodPrefixList:(NSArray<NSString *> *)enableMethodPrefixList;
 
+/**
+ 获取当前设置的防拦截前缀
+ */
 + (NSArray *)getAvoidCrashEnableMethodPrefixList;
 
 
 /**
- * 设置信息回掉收集
+ * 设置信息回掉收集，可以将回调结果上行服务端
  */
 + (void)setupBlock:(void(^)(NSException *exception,NSString *defaultToDo,BOOL upload))aBlock;
 
@@ -70,6 +73,9 @@
 
 // 直接开启所有拦截，不由服务端控制
 + (void)becomeAllEffective;
+
+// 获取本地全部DEBUG下所拦截的崩溃日志
++ (NSArray<YDAvoidCrashModel *> *)getAllVoidCrashForDebugDB;
 
 /**
  * 以 avoidCrash_ 加模块名命名用于其它模块对各自 crash的处理

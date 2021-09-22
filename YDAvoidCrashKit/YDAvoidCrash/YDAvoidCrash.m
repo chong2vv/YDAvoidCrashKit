@@ -184,11 +184,7 @@ static NSArray *_enableMethodPrefixList = nil;
         }];
         [alert addAction:cancel];
         UIViewController *controller;
-        if (@available(iOS 13.0, *)) {
-            controller = [UIApplication sharedApplication].windows.lastObject.rootViewController;
-        }else {
-            controller = [UIApplication sharedApplication].keyWindow.rootViewController;
-        }
+        controller = [UIApplication sharedApplication].windows.lastObject.rootViewController;
     
         while (controller.presentedViewController) {
             controller = controller.presentedViewController;
@@ -198,6 +194,10 @@ static NSArray *_enableMethodPrefixList = nil;
     });
 #endif
     
+}
+
++ (NSArray<YDAvoidCrashModel *> *)getAllVoidCrashForDebugDB {
+    return [[YDAvoidDB shareInstance] selectAllCrashModel];
 }
 
 + (NSString*)getCurrentTimes{
@@ -266,7 +266,7 @@ static NSArray *_enableMethodPrefixList = nil;
 
 + (NSArray<NSString *> *)enableMethodPrefixList {
     if (_enableMethodPrefixList == nil) {
-        _enableMethodPrefixList = @[@"NS"];
+        _enableMethodPrefixList = @[@"NS",@"YD"];
     }
     return _enableMethodPrefixList;
 }

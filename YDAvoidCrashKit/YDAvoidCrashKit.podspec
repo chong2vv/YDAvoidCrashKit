@@ -33,7 +33,14 @@ Pod::Spec.new do |spec|
 
   spec.source_files = "YDAvoidCrashKit/**/*.{h,m}","YDAvoidCrashKit/*.{h,m}"
   spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
-
+  
+  spec.subspec 'YDLogger' do |ss|
+      ss.libraries = 'c++'
+      ss.source_files = 'YDAvoidCrashKit/YDLogger/*'
+      ss.xcconfig = {
+      'GCC_PREPROCESSOR_DEFINITIONS' => 'ARTLOGGERHYLOG=1',
+    }
+  end
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"
 

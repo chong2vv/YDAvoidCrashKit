@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "YDTestAction.h"
-#import "YDKit.h"
+#import "YDAvoidCrashKit.h"
 
 @interface AppDelegate ()
 

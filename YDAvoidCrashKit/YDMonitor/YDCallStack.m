@@ -429,7 +429,7 @@ uintptr_t YDInstructionAddressByCPU(const uintptr_t address) {
 #endif
     return reAddress - 1;
 }
-mach_msg_type_number_t YDThreadStateCountByCPU() {
+mach_msg_type_number_t YDThreadStateCountByCPU(void) {
 #if defined(__arm64__)
     return ARM_THREAD_STATE64_COUNT;
 #elif defined(__arm__)
@@ -462,7 +462,7 @@ mach_msg_type_number_t YDThreadStateCountByCPU() {
  #define x86_AVX_STATE64         17
  #define x86_AVX_STATE           18
 */
-thread_state_flavor_t YDThreadStateByCPU() {
+thread_state_flavor_t YDThreadStateByCPU(void) {
 #if defined(__arm64__)
     return ARM_THREAD_STATE64;
 #elif defined(__arm__)
