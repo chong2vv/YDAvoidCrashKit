@@ -12,7 +12,6 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <sys/mount.h>
-#import <stdatomic.h>
 
 /**
  获取磁盘信息需要的文件目录

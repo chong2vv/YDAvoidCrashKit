@@ -11,9 +11,8 @@
 #include <stdio.h>
 #include <libkern/OSAtomic.h>
 #include <unistd.h>
-#include <string.h>
-#include <atomic>
-#import <stdatomic.h>
+#include <string>
+
 /**
  自定义错误类型
  
