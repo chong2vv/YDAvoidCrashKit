@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YDAvoidCrashKit"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.6"
   spec.summary      = "防崩溃、性能检测等"
 
   spec.homepage     = "https://github.com/chong2vv/YDKit"
@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
 
-  spec.source       = { :git => "https://github.com/chong2vv/YDKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/chong2vv/YDAvoidCrashKit.git", :tag => "#{spec.version}" }
 
   spec.source_files = "YDAvoidCrashKit/**/*.{h,m}","YDAvoidCrashKit/*.{h,m}"
   spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
@@ -43,8 +43,6 @@ Pod::Spec.new do |spec|
   end
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"
-
-
   spec.dependency "FMDB"
 
 
