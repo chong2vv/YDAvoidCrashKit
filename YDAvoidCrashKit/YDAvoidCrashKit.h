@@ -10,6 +10,9 @@
 #import "YDLogService.h"
 #import "YDAvoidDB.h"
 
+//YDLog UI
+#import "YDLogListViewController.h"
+
 //! Project version number for YDKit.
 FOUNDATION_EXPORT double YDKitVersionNumber;
 
