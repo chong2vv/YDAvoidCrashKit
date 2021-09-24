@@ -2,10 +2,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - YDAvoidCrashKit (0.0.5):
-    - FMDB
-    - YDAvoidCrashKit/YDLogger (= 0.0.5)
-  - YDAvoidCrashKit/YDLogger (0.0.5):
+  - YDAvoidCrashKit (0.0.6):
     - FMDB
 
 DEPENDENCIES:
@@ -21,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  YDAvoidCrashKit: fbf5d814f0bfcb8a47640a144da9a2321fd635de
+  YDAvoidCrashKit: e80391b6c0a5f3d32f4992ffcb1f617d7f9af799
 
 PODFILE CHECKSUM: 43db46e05a66ddd0718130387d5ee18d1d9ce72b
 
