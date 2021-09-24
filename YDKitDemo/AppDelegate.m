@@ -23,15 +23,11 @@
     [YDAvoidCrash setupBlock:^(NSException *exception, NSString *defaultToDo, BOOL upload) {
             
     }];
+    [YDAvoidCrash becomeAllEffectiveWithLogger:YES];
     
-    [YDAvoidCrash becomeAllEffective];
-    
-    YDTestAction *testAction = [[YDTestAction alloc] init];
-    [testAction noAction];
-//    NSArray *array = @[@"1",@"2"];
-//    NSString *testStr = [array objectAtIndex:3];
-    
-    NSLog(@"ErrorDB === %@",[[YDAvoidDB shareInstance] selectAllCrashModel].firstObject.errorInfoDic);
+    YDLogInfo(@"yd _ test");
+    NSString *rizhi = [[[YDLogService shared] getAllLogFileData] lastObject];
+    NSLog(@"%@", [[YDLogService shared] getYDLogInfo:rizhi]);
     
     return YES;
 }

@@ -69,10 +69,10 @@
  *  .................
  *  .................
  */
-+ (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash;
++ (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash openLogger:(BOOL) openLogger;
 
 // 直接开启所有拦截，不由服务端控制
-+ (void)becomeAllEffective;
++ (void)becomeAllEffectiveWithLogger:(BOOL) openLogger;
 
 // 获取本地全部DEBUG下所拦截的崩溃日志
 + (NSArray<YDAvoidCrashModel *> *)getAllVoidCrashForDebugDB;

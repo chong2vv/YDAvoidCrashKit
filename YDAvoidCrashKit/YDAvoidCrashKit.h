@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YDAvoidCrash.h"
+#import "YDLogService.h"
 #import "YDAvoidDB.h"
 
 //! Project version number for YDKit.

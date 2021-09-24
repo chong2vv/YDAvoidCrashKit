@@ -12,6 +12,7 @@
 #import "NSObject+YDAvoidCrash.h"
 #import "NSObject+YDAvoidCrashRunTime.h"
 #import "YDAvoidDB.h"
+#import "YDLogService.h"
 
 #define AvoidCrashSeparator         @"================================================================"
 #define AvoidCrashSeparatorWithFlag @"========================AvoidCrash Log=========================="
@@ -41,13 +42,17 @@ static NSArray *_enableMethodPrefixList = nil;
     YDAvoidCrashBlock = aBlock;
 }
 
-+ (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash {
++ (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash openLogger:(BOOL)openLogger{
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (openavoidcrash.count <= 0) { // 服务器不返回就 默认全部拦截
-            [self becomeAllEffective];
+            [self becomeAllEffectiveWithLogger:openLogger];
             return;
+        }
+        
+        if (openLogger) {
+            [[YDLogService shared] startLogNeedHook:NO];
         }
         
         [NSObject avoidCrashForwardingExchangeMethod];
@@ -76,7 +81,7 @@ static NSArray *_enableMethodPrefixList = nil;
     });
 }
 
-+ (void)becomeAllEffective {
++ (void)becomeAllEffectiveWithLogger:(BOOL)openLogger {
     
     [NSObject avoidCrashForwardingExchangeMethod];
     [NSObject avoidCrashExchangeMethod];
@@ -105,6 +110,10 @@ static NSArray *_enableMethodPrefixList = nil;
     [CALayer avoidCrashExchangeMethod];
     
     [[YDAvoidCrash new] avoidCrashEffective];
+    
+    if (openLogger) {
+        [[YDLogService shared] startLogNeedHook:NO];
+    }
 }
 
 - (void)avoidCrashEffective {
@@ -132,6 +141,7 @@ static NSArray *_enableMethodPrefixList = nil;
     if (YDAvoidCrashBlock) {
         YDAvoidCrashBlock(exception,defaultToDo,upload);
     }
+    
 #ifdef DEBUG
     
     //堆栈数据
@@ -173,10 +183,7 @@ static NSArray *_enableMethodPrefixList = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *message = [NSString stringWithFormat:@"%@",errorInfoDic];
         
-        YDAvoidCrashModel *model = [[YDAvoidCrashModel alloc] init];
-        model.errorInfoDic = [NSString stringWithFormat:@"%@", message];
-        model.crashTime = [self getCurrentTimes];
-        [[YDAvoidDB shareInstance] insertWithCrashModel:model];
+        YDLogError([NSString stringWithFormat:@"%@"],errorInfoDic);
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"崩溃警告" message:message preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

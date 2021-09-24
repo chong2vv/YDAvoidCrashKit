@@ -36,7 +36,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'YDLogger' do |ss|
       ss.libraries = 'c++'
-      ss.source_files = 'YDAvoidCrashKit/YDLogger/*'
+      ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
       ss.xcconfig = {
       'GCC_PREPROCESSOR_DEFINITIONS' => 'ARTLOGGERHYLOG=1',
     }

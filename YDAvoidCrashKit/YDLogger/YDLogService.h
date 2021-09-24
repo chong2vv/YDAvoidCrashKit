@@ -54,6 +54,12 @@ NS_ASSUME_NONNULL_BEGIN
  可以将文件大小更新到真实的文件大小
  */
 - (void)closeFileBeforeShutDown;
+
+- (void)clearAllLog;
+
+- (NSArray *)getAllLogFileData;
+
+- (NSDictionary *)getYDLogInfo:(NSString *)filePath;
 @end
 
 NS_ASSUME_NONNULL_END
