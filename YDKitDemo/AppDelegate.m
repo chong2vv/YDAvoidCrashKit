@@ -25,10 +25,6 @@
     }];
     [YDAvoidCrash becomeAllEffectiveWithLogger:YES];
     
-    YDLogInfo(@"yd _ test");
-    NSString *rizhi = [[[YDLogService shared] getAllLogFileData] lastObject];
-    NSLog(@"%@", [[YDLogService shared] getYDLogInfo:rizhi]);
-    
     return YES;
 }
 

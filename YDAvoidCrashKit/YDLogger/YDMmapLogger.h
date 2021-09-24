@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <libkern/OSAtomic.h>
 #include <unistd.h>
-#include <string>
+#include <string.h>
 #include <atomic>
 #import <stdatomic.h>
 /**
