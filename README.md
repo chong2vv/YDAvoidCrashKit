@@ -6,7 +6,7 @@ YDAvoidCrash 是根据[@chenfanfang](https://github.com/chenfanfang)开源的 [A
 ### 使用CocoaPods导入
 
 ```
-pod 'YDKit', '0.0.2'
+pod 'YDAvoidCrashKit', '0.0.3'
 ```
 ### 使用方法
 

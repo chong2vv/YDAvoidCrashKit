@@ -18,6 +18,8 @@
 
 @property (nonatomic, copy)NSString                 *tagKey;
 @property (nonatomic, copy)NSString                 *lastTagKey;
+
+@property (nonatomic, assign)NSInteger clearDayTime;
 @end
 
 /**
@@ -54,7 +56,6 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
 
 - (instancetype)init {
     if (self = [super init]) {
-        
         // 创建日志文件夹
         _logFileDir = [self _createDirectory:YDFILE_PREFIXNAME];
         _dateFormatter = [[NSDateFormatter alloc] init];
@@ -63,7 +64,7 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
         [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
         
         _tagKey = kYDLogAllLinesKey;
-        
+        _clearDayTime = 10;
     }
     
     return self;
@@ -74,6 +75,8 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
     
     // 开起日志
     [[YDMmapLogService shared] startLoggerNeedHook:hook];
+    
+    [self _autoClearLogFile];
 }
 
 - (void)resetLogLevel:(YDLogLevel)level {
@@ -114,16 +117,53 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
     }
 }
 
+- (void)clearLogWithDayTime:(NSInteger)day {
+    self.clearDayTime = day;
+}
+
+- (void)_autoClearLogFile {
+    NSString *fileDir = _logFileDir;
+    
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *files = [fm subpathsOfDirectoryAtPath:fileDir error:nil];
+    if (!files) return;
+    
+    // fileDir文件夹下的所有文件
+    for (int i = 0; i < (NSInteger)files.count; ++i) {
+        @autoreleasepool {
+            NSString *fileName = files[i];
+            if (![self _isValidFileName:fileName]) continue ;
+            NSString *time = [fileName componentsSeparatedByString:@"-"][1];
+            //秒级时间戳
+            if ([[NSDate date] timeIntervalSince1970] - time.doubleValue > self.clearDayTime * 24 * 60 * 60)
+                [fm removeItemAtPath:[fileDir stringByAppendingPathComponent:fileName] error:nil];
+        }
+    }
+}
+
 - (NSArray *)getAllLogFileData {
     NSString *fileDir = _logFileDir;
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *fileNames = [fm subpathsOfDirectoryAtPath:fileDir error:nil];
     NSMutableArray *files = [NSMutableArray array];
     for (NSString *name in fileNames) {
-        [files insertObject:[NSString stringWithFormat:@"%@/%@",fileDir, name] atIndex:0];
-//        [files addObject:[NSString stringWithFormat:@"%@/%@",fileDir, name]];
+        if (![self _isValidFileName:name]) continue ;
+        [files addObject:[NSString stringWithFormat:@"%@/%@",fileDir, name]];
     }
-    return files;
+    
+    NSArray *sortedPaths = [files sortedArrayUsingComparator:^(NSString * firstPath, NSString* secondPath) {
+
+
+    NSDictionary *firstFileInfo = [[NSFileManager defaultManager] attributesOfItemAtPath:firstPath error:nil];/*获取前一个文件信息*/
+
+    NSDictionary *secondFileInfo = [[NSFileManager defaultManager] attributesOfItemAtPath:secondPath error:nil];/*获取后一个文件信息*/
+
+    id firstData = [firstFileInfo objectForKey:NSFileCreationDate];/*获取前一个文件创建时间*/
+
+    id secondData = [secondFileInfo objectForKey:NSFileCreationDate];/*获取后一个文件创建时间*/
+        return [secondData compare:firstData];
+    }];
+    return sortedPaths;
 }
 
 - (NSDictionary *)getYDLogInfo:(NSString *)filePath {

@@ -28,6 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shared;
 
 /**
+ 设置多久清除一次本地日志
+
+ @param day 清除日志，默认超过10天, 开启日志之前设置有效（startLogNeedHook方法调用之前）
+ */
+
+- (void)clearLogWithDayTime:(NSInteger) day;
+
+/**
  开启日志，是否开启hook模式，需要动态下发
 
  @param hook 是否开启hook模式
@@ -36,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 设置日志等级，默认为YDLogLevelDetail
+ 设置日志等级，默认为YDLogLevelDetail, 开启日志之前设置有效（startLogNeedHook方法调用之前）
  
  @param level 日志等级
  */
@@ -55,10 +63,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)closeFileBeforeShutDown;
 
+
+/**
+ 清除全部日志
+ */
 - (void)clearAllLog;
 
+
+/**
+ 获取全部日志，按时间降序
+ */
 - (NSArray *)getAllLogFileData;
 
+
+/**
+ 通过日志路径获取日志信息
+ */
 - (NSDictionary *)getYDLogInfo:(NSString *)filePath;
 @end
 

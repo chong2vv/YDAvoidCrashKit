@@ -142,6 +142,13 @@ static NSArray *_enableMethodPrefixList = nil;
         YDAvoidCrashBlock(exception,defaultToDo,upload);
     }
     
+    //如果出现被拦截则记录到日志中
+    NSDictionary *infoDic = @{
+                                   key_defaultToDo      : defaultToDo,
+                                   key_exception        : exception
+                                   };
+    YDLogError(@"%@", infoDic );
+    
 #ifdef DEBUG
     
     //堆栈数据
@@ -182,8 +189,6 @@ static NSArray *_enableMethodPrefixList = nil;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *message = [NSString stringWithFormat:@"%@",errorInfoDic];
-        
-        YDLogError([NSString stringWithFormat:@"%@"],errorInfoDic);
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"崩溃警告" message:message preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

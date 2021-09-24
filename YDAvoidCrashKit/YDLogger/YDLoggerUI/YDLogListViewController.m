@@ -61,9 +61,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *filePath = [self.logList objectAtIndex:indexPath.row];
-    NSDictionary *info = [[YDLogService shared] getYDLogInfo:filePath];
-    YDLogPreviewViewController *vc = [[YDLogPreviewViewController alloc] initWithLogInfo:info];
-    [self presentViewController:vc animated:YES completion:nil];
+    YDLogPreviewViewController *vc = [[YDLogPreviewViewController alloc] initWithLogFilePath:filePath];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (NSString *)_dateStringFormTimeStamp:(NSString *)timeStamp {
