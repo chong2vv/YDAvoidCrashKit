@@ -12,7 +12,6 @@
 
 @interface YDUnrecognizedSelectorSolveObject ()
 
-@property (nonatomic, assign) BOOL isOpenCallStack;
 
 @end
 
@@ -23,7 +22,6 @@
     static dispatch_once_t  once_token;
     dispatch_once(&once_token, ^{
         unrecognizedSelectorSolveObject = [[YDUnrecognizedSelectorSolveObject alloc] init];
-        unrecognizedSelectorSolveObject.isOpenCallStack = YES;
     });
     return unrecognizedSelectorSolveObject;
 }
@@ -35,9 +33,6 @@
     return YES;
 }
 
-- (void)openCallStack:(BOOL)isOpen {
-    self.isOpenCallStack = isOpen;
-}
 
 + (NSString*)getCurrentTimes{
     

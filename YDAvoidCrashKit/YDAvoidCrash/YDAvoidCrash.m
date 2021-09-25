@@ -102,6 +102,9 @@ static NSArray *_enableMethodPrefixList = nil;
 
     [NSString avoidCrashExchangeMethod];
     [NSMutableString avoidCrashExchangeMethod];
+    
+    [NSData avoidCrashExchangeMethod];
+    [NSMutableData avoidCrashExchangeMethod];
 
     [NSUserDefaults avoidCrashExchangeMethod];
 

@@ -21,6 +21,18 @@
  */
 #define AvoidCrashNotification @"AvoidCrashNotification"
 
+/**
+ 日志记录宏，只记录到本地，使用方法和NSLog相同，引用当前文件后可直接使用
+ 根据日志level的不同，记录的日志不同
+ 当调用setLogLevel:设置需要记录的日志level为YDLogDebug时，那么YDLogDebug等级以下的等级（含YDLogDebug）都会被记录
+ 默认设置为YDLogDetail
+ 
+ YDLogError()   记录错误信息，适用于线上/线下环境，格式：@"Erro timeStamp error"
+ YDLogInfo()    记录极简信息，适用于线上/线下环境，格式：@"Info timeStamp info"
+ YDLogDetail()  记录详细信息，适用于线上/线下环境，格式：@"Deta timeStamp [thread] func str"
+ YDLogDebug()   记录开发信息，适用于Debug环境，格式：@"Dbug timeStamp str"
+ YDLogVerbose() 记录复杂信息，适用于Debug环境，格式：@"Verb timeStamp [thread] func in file:line desc"
+ */
 
 
 //user can ignore below define
@@ -31,6 +43,8 @@
 #ifdef DEBUG
 
 #define  AvoidCrashLog(...) NSLog(@"%@",[NSString stringWithFormat:__VA_ARGS__])
+
+#define YDAvoidTLog(_var) ({ NSString *name = @#_var; NSLog(@"%@: %@ -> %p : %@", name, [_var class], _var, _var); })
 
 #else
 

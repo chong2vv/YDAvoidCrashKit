@@ -24,6 +24,8 @@
 		1574FE1426F20E550046F07F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE1326F20E550046F07F /* main.m */; };
 		1574FE1E26F20E550046F07F /* YDKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE1D26F20E550046F07F /* YDKitDemoTests.m */; };
 		1574FE2926F20E550046F07F /* YDKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE2826F20E550046F07F /* YDKitDemoUITests.m */; };
+		15CB1E3126FF3B09005B8314 /* NSData+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1E3026FF3B09005B8314 /* NSData+YDAvoidCrash.m */; };
+		15CB1E3426FF40A8005B8314 /* NSMutableData+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1E3326FF40A7005B8314 /* NSMutableData+YDAvoidCrash.m */; };
 		15CC3C2126F43EF50089F133 /* YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3BF026F43EF50089F133 /* YDAvoidCrash.m */; };
 		15CC3C2226F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3BF526F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.m */; };
 		15CC3C2326F43EF50089F133 /* NSObject+YDForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3BF626F43EF50089F133 /* NSObject+YDForwarding.m */; };
@@ -102,6 +104,10 @@
 		1574FE2426F20E550046F07F /* YDKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE2826F20E550046F07F /* YDKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDKitDemoUITests.m; sourceTree = "<group>"; };
 		1574FE2A26F20E550046F07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15CB1E2F26FF3B09005B8314 /* NSData+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		15CB1E3026FF3B09005B8314 /* NSData+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+YDAvoidCrash.m"; sourceTree = "<group>"; };
+		15CB1E3226FF40A7005B8314 /* NSMutableData+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+YDAvoidCrash.h"; sourceTree = "<group>"; };
+		15CB1E3326FF40A7005B8314 /* NSMutableData+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+YDAvoidCrash.m"; sourceTree = "<group>"; };
 		15CC3BF026F43EF50089F133 /* YDAvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDAvoidCrash.m; sourceTree = "<group>"; };
 		15CC3BF126F43EF50089F133 /* YDUnrecognizedSelectorSolveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDUnrecognizedSelectorSolveObject.h; sourceTree = "<group>"; };
 		15CC3BF326F43EF50089F133 /* NSObject+YDForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YDForwarding.h"; sourceTree = "<group>"; };
@@ -314,6 +320,10 @@
 				15CC3C0026F43EF50089F133 /* NSAttributedString+YDAvoidCrash.m */,
 				15CC3C0E26F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.h */,
 				15CC3C0426F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.m */,
+				15CB1E2F26FF3B09005B8314 /* NSData+YDAvoidCrash.h */,
+				15CB1E3026FF3B09005B8314 /* NSData+YDAvoidCrash.m */,
+				15CB1E3226FF40A7005B8314 /* NSMutableData+YDAvoidCrash.h */,
+				15CB1E3326FF40A7005B8314 /* NSMutableData+YDAvoidCrash.m */,
 				15CC3C1026F43EF50089F133 /* NSArray+YDAvoidCrash.h */,
 				15CC3C0226F43EF50089F133 /* NSArray+YDAvoidCrash.m */,
 				15CC3BFD26F43EF50089F133 /* NSMutableArray+YDAvoidCrash.h */,
@@ -529,7 +539,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CB1E3426FF40A8005B8314 /* NSMutableData+YDAvoidCrash.m in Sources */,
 				15CC3C2B26F43EF50089F133 /* UIView+YDAvoidCrash.m in Sources */,
+				15CB1E3126FF3B09005B8314 /* NSData+YDAvoidCrash.m in Sources */,
 				1574FE0926F20E520046F07F /* ViewController.m in Sources */,
 				15CC3C2826F43EF50089F133 /* NSDictionary+YDAvoidCrash.m in Sources */,
 				1574FE0326F20E520046F07F /* AppDelegate.m in Sources */,
