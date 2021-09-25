@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.homeTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    self.edgesForExtendedLayout=UIRectEdgeNone;
     self.logList = [[[YDLogService shared] getAllLogFileData] copy];
     _dateFormatter = [[NSDateFormatter alloc] init];
     [_dateFormatter setDateStyle:NSDateFormatterFullStyle];
@@ -34,7 +35,8 @@
 
 - (void)configUI {
     [self.view addSubview:self.homeTableView];
-    self.homeTableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    CGFloat height = [UIScreen mainScreen].bounds.size.height - self.view.window.windowScene.statusBarManager.statusBarFrame.size.height - 44.f - 49.f;
+    self.homeTableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height);
     [self.homeTableView reloadData];
 }
 

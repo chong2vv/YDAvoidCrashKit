@@ -60,6 +60,8 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self configUI];
 }
 
@@ -365,7 +367,7 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
 - (UITextView *)focusTV {
     if (_focusTV == nil) {
         CGSize screenSize = [UIScreen mainScreen].bounds.size;
-        CGFloat height = screenSize.height - [UIApplication sharedApplication].statusBarFrame.size.height - 44.f;
+        CGFloat height = screenSize.height - self.view.window.windowScene.statusBarManager.statusBarFrame.size.height - 44.f;
         _focusTV = [[UITextView alloc] initWithFrame:CGRectMake(screenSize.width / 8, 0, screenSize.width * 3 / 4, height)];
         _focusTV.font = [UIFont systemFontOfSize:15.f];
         _focusTV.editable = NO;
@@ -397,7 +399,7 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
 - (UITableView *)tableView {
     if (_tableView == nil) {
         CGSize screenSize = [UIScreen mainScreen].bounds.size;
-        CGFloat height = screenSize.height - [UIApplication sharedApplication].statusBarFrame.size.height - 44.f - 49.f;
+        CGFloat height = screenSize.height - self.view.window.windowScene.statusBarManager.statusBarFrame.size.height - 44.f - 49.f;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 49.f, screenSize.width, height) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;

@@ -20,7 +20,19 @@
         //replaceCharactersInRange
         [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setFrame:) method2Sel:@selector(avoidCrashSetFrame:)];
         [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setBounds:) method2Sel:@selector(avoidCrashSetBounds:)];
+        [NSObject exchangeClassMethod:[self class] method1Sel:@selector(removeFromSuperview) method2Sel:@selector(avoidRemoveFromSuperview)];
     });
+}
+
+
+- (void)avoidRemoveFromSuperview {
+    @try {
+        [self avoidRemoveFromSuperview];
+    } @catch (NSException *exception) {
+        [YDAvoidCrash noteErrorWithException:exception defaultToDo:AvoidCrashDefaultIgnore];
+    } @finally {
+        
+    }
 }
 
 - (void)avoidCrashSetBounds:(CGRect)bounds {
