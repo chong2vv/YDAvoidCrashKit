@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "YDAvoidCrash.h"
 #import "YDLogService.h"
-#import "YDAvoidDB.h"
 
 //YDLog UI
 #import "YDLogListViewController.h"

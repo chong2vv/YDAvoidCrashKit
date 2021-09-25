@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YDAvoidCrashModel.h"
 
 /**
  *  if you want to get the reason that can cause crash, you can add observer notification in AppDelegate.
@@ -79,8 +78,6 @@
  */
 + (void)becomeAllEffectiveWithLogger:(BOOL) openLogger;
 
-// 获取本地全部DEBUG下所拦截的崩溃日志
-+ (NSArray<YDAvoidCrashModel *> *)getAllVoidCrashForDebugDB;
 
 /**
  * 以 avoidCrash_ 加模块名命名用于其它模块对各自 crash的处理

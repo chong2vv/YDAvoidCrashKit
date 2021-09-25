@@ -8,7 +8,6 @@
 #import "YDUnrecognizedSelectorSolveObject.h"
 #import <objc/runtime.h>
 #import "YDCallStack.h"
-#import "YDAvoidDB.h"
 
 @interface YDUnrecognizedSelectorSolveObject ()
 

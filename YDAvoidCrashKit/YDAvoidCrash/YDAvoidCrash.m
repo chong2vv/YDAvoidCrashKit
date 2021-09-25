@@ -11,7 +11,6 @@
 #import "NSObject+YDForwarding.h"
 #import "NSObject+YDAvoidCrash.h"
 #import "NSObject+YDAvoidCrashRunTime.h"
-#import "YDAvoidDB.h"
 #import "YDLogService.h"
 
 #define AvoidCrashSeparator         @"================================================================"
@@ -206,10 +205,6 @@ static NSArray *_enableMethodPrefixList = nil;
     });
 #endif
     
-}
-
-+ (NSArray<YDAvoidCrashModel *> *)getAllVoidCrashForDebugDB {
-    return [[YDAvoidDB shareInstance] selectAllCrashModel];
 }
 
 + (NSString*)getCurrentTimes{
