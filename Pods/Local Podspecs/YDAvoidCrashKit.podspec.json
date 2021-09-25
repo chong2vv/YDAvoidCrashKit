@@ -29,11 +29,6 @@
     "Foundation",
     "UIKit"
   ],
-  "dependencies": {
-    "FMDB": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "YDLogger",

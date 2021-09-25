@@ -386,7 +386,6 @@
 				1574FDFA26F20E520046F07F /* Sources */,
 				1574FDFB26F20E520046F07F /* Frameworks */,
 				1574FDFC26F20E520046F07F /* Resources */,
-				02BA67DB5EF95673A15C8A82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -504,23 +503,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02BA67DB5EF95673A15C8A82 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YDKitDemo/Pods-YDKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4F12C0E757E0EE03353B534F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
