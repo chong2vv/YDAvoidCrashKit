@@ -41,8 +41,8 @@ Pod::Spec.new do |spec|
   spec.subspec 'YDLogger' do |ss|
       ss.libraries = 'c++'
       ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
-      ss.static_framework = true
   end
+  spec.static_framework = true
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"
   spec.dependency "FMDB"
