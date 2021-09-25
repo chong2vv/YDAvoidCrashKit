@@ -68,10 +68,15 @@
  *  [NSMutableArray avoidCrashExchangeMethod];
  *  .................
  *  .................
+ *  @param openavoidcrash 需要开启的配置类
+ *  @param openLogger 是否同时开启日志
  */
 + (void)becomeEffective:(NSArray<NSString *> *)openavoidcrash openLogger:(BOOL) openLogger;
 
-// 直接开启所有拦截，不由服务端控制
+/**
+ 直接开启所有拦截，不由服务端控制
+ @param openLogger 是否同时开启日志
+ */
 + (void)becomeAllEffectiveWithLogger:(BOOL) openLogger;
 
 // 获取本地全部DEBUG下所拦截的崩溃日志
