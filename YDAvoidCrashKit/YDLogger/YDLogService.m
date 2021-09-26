@@ -61,7 +61,7 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
         _dateFormatter = [[NSDateFormatter alloc] init];
         [_dateFormatter setDateStyle:NSDateFormatterFullStyle];
         [_dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-        [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+        [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
         _tagKey = kYDLogAllLinesKey;
         _clearDayTime = 10;
@@ -255,8 +255,12 @@ static NSString * const kYDLogSearchKey = @"YDLogSearch";
                     [infoArr addObject:@(i - deleteArr.count)];
                     isTag = YES;
                 }
+                else if ([tag isEqualToString:@"Monitor"]) {
+                    [infoArr addObject:@(i - deleteArr.count)];
+                    isTag = YES;
+                }
 
-                // 第一条数据就无tag，视为安卓的日志，避免崩溃
+                // 第一条数据就无tag，视为其他的日志，避免崩溃
                 if (!isTag && i == 0) {
                     [fileLinesDic setValue:allLines forKey:kYDLogAllLinesKey];
                     return fileLinesDic;

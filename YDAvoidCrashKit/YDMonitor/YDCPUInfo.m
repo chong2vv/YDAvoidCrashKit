@@ -7,7 +7,11 @@
 
 #import "YDCPUInfo.h"
 #import "YDCallStack.h"
-#import "YDCallStackModel.h"
+#import "YDAvoidCrashKit.h"
+
+#define key_stackStr    @"stackStr" //完整堆栈信息
+#define key_isStuck     @"isStuck" //是否被卡住
+#define key_monitor_info  @"monitor_info" //可展示信息
 
 @interface YDCPUInfo ()
 
@@ -54,9 +58,14 @@ static NSInteger _cpuRate = 80;
                 if (cpuUsage > YDCPUInfo.cpuRate) {
                     //cup 消耗大于设置值时打印和记录堆栈
                     NSString *reStr = YDStackOfThread(threads[i]);
-                    YDCallStackModel *model = [[YDCallStackModel alloc] init];
-                    model.stackStr = reStr;
-                    //记录数据库中
+                    BOOL isStuck = YES;
+                    NSDictionary *infoDic = @{
+                        key_stackStr: reStr,
+                        key_isStuck: [NSNumber numberWithBool:isStuck],
+                        key_monitor_info: @"CPU useage overload thread stack"
+                    };
+                    YDLogMonitorDetail(@"%@", infoDic);
+                    
                     NSLog(@"CPU useage overload thread stack：\n%@",reStr);
                 }
             }

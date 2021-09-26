@@ -15,16 +15,18 @@
  当调用setLogLevel:设置需要记录的日志level为YDLogDebug时，那么YDLogDebug等级以下的等级（含YDLogDebug）都会被记录
  默认设置为YDLogDetail
  
- YDLogError()   记录错误信息，适用于线上/线下环境，格式：@"Erro timeStamp error"
- YDLogInfo()    记录极简信息，适用于线上/线下环境，格式：@"Info timeStamp info"
- YDLogDetail()  记录详细信息，适用于线上/线下环境，格式：@"Deta timeStamp [thread] func str"
- YDLogDebug()   记录开发信息，适用于Debug环境，格式：@"Dbug timeStamp str"
- YDLogVerbose() 记录复杂信息，适用于Debug环境，格式：@"Verb timeStamp [thread] func in file:line desc"
+ YDLogError()           记录错误信息，适用于线上/线下环境，格式：@"Erro timeStamp error"
+ YDLogInfo()            记录极简信息，适用于线上/线下环境，格式：@"Info timeStamp info"
+ YDLogDetail()          记录详细信息，适用于线上/线下环境，格式：@"Deta timeStamp [thread] func str"
+ YDLogMonitorDetail()   记录详细信息，适用于线上/线下环境，格式：@"Deta timeStamp [thread] str"
+ YDLogDebug()           记录开发信息，适用于Debug环境，格式：@"Dbug timeStamp str"
+ YDLogVerbose()         记录复杂信息，适用于Debug环境，格式：@"Verb timeStamp [thread] func in file:line desc"
  */
-#define YDLogError(fmt, ...)    [[YDMmapLogService shared] logError:NO frmt:(fmt), ##__VA_ARGS__]
-#define YDLogInfo(fmt, ...)     [[YDMmapLogService shared] logInfo:NO frmt:(fmt), ##__VA_ARGS__]
+#define YDLogError(fmt, ...)    [[YDMmapLogService shared] logError:YES frmt:(fmt), ##__VA_ARGS__]
+#define YDLogInfo(fmt, ...)     [[YDMmapLogService shared] logInfo:YES frmt:(fmt), ##__VA_ARGS__]
 #define YDLogDetail(fmt, ...)   [[YDMmapLogService shared] logDetail:NO func:__PRETTY_FUNCTION__ frmt:(fmt), ##__VA_ARGS__]
-#define YDLogDebug(fmt, ...)    [[YDMmapLogService shared] logDebug:NO frmt:(fmt), ##__VA_ARGS__]
+#define YDLogMonitorDetail(fmt, ...)   [[YDMmapLogService shared] logMonitorDetail:NO frmt:(fmt), ##__VA_ARGS__]
+#define YDLogDebug(fmt, ...)    [[YDMmapLogService shared] logDebug:YES frmt:(fmt), ##__VA_ARGS__]
 #define YDLogVerbose(fmt, ...)  [[YDMmapLogService shared] logVerbose:NO func:__PRETTY_FUNCTION__ file:__FILE__ line:__LINE__ frmt:(fmt), ##__VA_ARGS__]
 
 
@@ -226,6 +228,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)logDetail:(BOOL)print
              func:(const char *)func
              frmt:(NSString *)frmt, ... NS_FORMAT_FUNCTION(3, 4);
+
+/**
+ 记录包含线程信息的性能检测信息，且日志level为YDLogLevelDetail
+ @"Deta timeStamp [thread] func detail"
+ 
+ @param print 是否用NSLog打印
+ @param frmt 字符串的格式
+ */
+- (void)logMonitorDetail:(BOOL)print
+             frmt:(NSString *)frmt, ... NS_FORMAT_FUNCTION(2, 3);
 
 
 /**

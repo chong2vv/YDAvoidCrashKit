@@ -174,7 +174,7 @@ static NSArray *_enableMethodPrefixList = nil;
     NSString *errorPlace = [NSString stringWithFormat:@"Error Place:%@",mainCallStackSymbolMsg];
 
     NSString *logErrorMessage = [NSString stringWithFormat:@"\n\n%@\n\n%@\n%@\n%@\n%@\n\n%@\n\n",AvoidCrashSeparatorWithFlag, errorName, errorReason, errorPlace, defaultToDo, AvoidCrashSeparator];
-    AvoidCrashLog(@"%@",logErrorMessage);
+    YDAvoidCrashLog(@"%@",logErrorMessage);
 
     //请忽略下面的赋值，目的只是为了能顺利上传cocoapods
     logErrorMessage = logErrorMessage;

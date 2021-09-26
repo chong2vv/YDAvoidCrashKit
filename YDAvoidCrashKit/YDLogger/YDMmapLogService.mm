@@ -297,6 +297,22 @@ void yd_signalHandler (int sig)
     }
 }
 
+- (void)logMonitorDetail:(BOOL)print frmt:(NSString *)frmt, ... {
+    if (_level < YDLogLevelDetail) return;
+    if (!frmt) return;
+    
+    @autoreleasepool {
+        va_list args;
+        va_start(args, frmt);
+        NSString *detail = [[NSString alloc] initWithFormat:frmt arguments:args];
+        va_end(args);
+        
+        NSString *string = [NSString stringWithFormat:@"Monitor %0.3f [%@] :%@\n", [self _timeStamp], [self _currentThreadInfo], detail];
+        [self performSelector:@selector(_logStringNoLock:) onThread:self.logThread withObject:string waitUntilDone:NO];
+        if (print) NSLog(@"%@", string);
+    }
+}
+
 - (void)logInfo:(BOOL)print frmt:(NSString *)frmt, ... {
     if (_level < YDLogLevelInfo) return;
     if (!frmt) return;
