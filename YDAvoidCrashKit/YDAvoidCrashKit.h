@@ -6,10 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+//YDAvoidCrash 防崩溃库
 #import "YDAvoidCrash.h"
+//YDLogger 日志库
 #import "YDLogService.h"
 
-//YDLog UI
-#import "YDLogListViewController.h"
+//YDLogger UI库 可快速查看本地的YDLog信息
+#import "YDLoggerUI.h"
 
 

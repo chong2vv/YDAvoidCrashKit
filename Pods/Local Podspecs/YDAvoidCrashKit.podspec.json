@@ -1,6 +1,6 @@
 {
   "name": "YDAvoidCrashKit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "summary": "防崩溃、性能检测等",
   "homepage": "https://github.com/chong2vv/YDAvoidCrashKit",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/chong2vv/YDAvoidCrashKit.git",
-    "tag": "0.0.6"
+    "tag": "0.0.7"
   },
   "source_files": [
     "YDAvoidCrashKit/**/*.{h,m}",
@@ -39,10 +39,28 @@
       ]
     },
     {
+      "name": "YDLoggerUI",
+      "libraries": "c++",
+      "source_files": [
+        "YDAvoidCrashKit/YDLoggerUI/*",
+        "YDAvoidCrashKit/YDLoggerUI/**/*.{h,m}"
+      ]
+    },
+    {
       "name": "YDAvoidCrash",
       "source_files": [
         "YDAvoidCrashKit/YDAvoidCrash/*",
         "YDAvoidCrashKit/YDAvoidCrash/**/*.{h,m}"
+      ],
+      "subspecs": [
+        {
+          "name": "YDAvoidCrashUtil",
+          "source_files": "YDAvoidCrashKit/YDAvoidCrash/YDAvoidCrashUtil/*.{h,m}"
+        },
+        {
+          "name": "YDAvoidCrashCategory",
+          "source_files": "YDAvoidCrashKit/YDAvoidCrash/YDAvoidCrashCategory/*.{h,m}"
+        }
       ]
     },
     {

@@ -30,8 +30,21 @@ Pod::Spec.new do |spec|
       log_ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
   end
   
+  spec.subspec 'YDLoggerUI' do |logui_ss|
+      logui_ss.libraries = 'c++'
+      logui_ss.source_files = 'YDAvoidCrashKit/YDLoggerUI/*', "YDAvoidCrashKit/YDLoggerUI/**/*.{h,m}"
+  end
+  
   spec.subspec 'YDAvoidCrash' do |crash_ss|
       crash_ss.source_files = 'YDAvoidCrashKit/YDAvoidCrash/*', "YDAvoidCrashKit/YDAvoidCrash/**/*.{h,m}"
+      
+      crash_ss.subspec 'YDAvoidCrashUtil' do |crash_util_ss|
+          crash_util_ss.source_files = "YDAvoidCrashKit/YDAvoidCrash/YDAvoidCrashUtil/*.{h,m}"
+      end
+      
+      crash_ss.subspec 'YDAvoidCrashCategory' do |crash_cate_ss|
+          crash_cate_ss.source_files = "YDAvoidCrashKit/YDAvoidCrash/YDAvoidCrashCategory/*.{h,m}"
+      end
   end
   
   spec.subspec 'YDMonitor' do |crash_ss|

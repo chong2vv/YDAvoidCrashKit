@@ -86,6 +86,7 @@
 		152E911A26FDDE20007DD43A /* YDLogListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDLogListViewController.m; sourceTree = "<group>"; };
 		152E911C26FDDE29007DD43A /* YDLogPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDLogPreviewViewController.h; sourceTree = "<group>"; };
 		152E911D26FDDE29007DD43A /* YDLogPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDLogPreviewViewController.m; sourceTree = "<group>"; };
+		152E911F270046C5007DD43A /* YDLoggerUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDLoggerUI.h; sourceTree = "<group>"; };
 		1574FDFE26F20E520046F07F /* YDKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE0126F20E520046F07F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1574FE0226F20E520046F07F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -188,7 +189,6 @@
 		1511DA6D26FB274A008DF760 /* YDLogger */ = {
 			isa = PBXGroup;
 			children = (
-				152E911526FDDDCF007DD43A /* YDLoggerUI */,
 				1511DA6E26FB2885008DF760 /* YDMmapLogger.cpp */,
 				1511DA6F26FB2885008DF760 /* YDMmapLogger.h */,
 				1511DA7426FB5377008DF760 /* YDMmapLogService.h */,
@@ -208,6 +208,7 @@
 				152E911A26FDDE20007DD43A /* YDLogListViewController.m */,
 				152E911C26FDDE29007DD43A /* YDLogPreviewViewController.h */,
 				152E911D26FDDE29007DD43A /* YDLogPreviewViewController.m */,
+				152E911F270046C5007DD43A /* YDLoggerUI.h */,
 			);
 			path = YDLoggerUI;
 			sourceTree = "<group>";
@@ -276,6 +277,7 @@
 		15CC3BEE26F43EF50089F133 /* YDAvoidCrashKit */ = {
 			isa = PBXGroup;
 			children = (
+				152E911526FDDDCF007DD43A /* YDLoggerUI */,
 				1511DA6D26FB274A008DF760 /* YDLogger */,
 				15CC3BEF26F43EF50089F133 /* YDAvoidCrash */,
 				15CC3C1826F43EF50089F133 /* YDMonitor */,
