@@ -22,8 +22,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   spec.source       = { :git => "https://github.com/chong2vv/YDAvoidCrashKit.git", :tag => "#{spec.version}" }
-  spec.source_files = "YDAvoidCrashKit/**/*.{h,m}","YDAvoidCrashKit/*.{h,m}"
-  spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
+  spec.source_files = "YDAvoidCrashKit/*"
+#  spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
   
   spec.subspec 'YDLogger' do |log_ss|
       log_ss.libraries = 'c++'
@@ -31,17 +31,17 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'YDLoggerUI' do |logui_ss|
-      logui_ss.source_files = 'YDAvoidCrashKit/YDLoggerUI/*', "YDAvoidCrashKit/YDLoggerUI/**/*.{h,m}"
+      logui_ss.source_files = "YDAvoidCrashKit/YDLoggerUI/**/*"
       logui_ss.dependency 'YDAvoidCrashKit/YDLogger'
   end
   
   spec.subspec 'YDAvoidCrash' do |crash_ss|
-      crash_ss.source_files = 'YDAvoidCrashKit/YDAvoidCrash/*', "YDAvoidCrashKit/YDAvoidCrash/**/*.{h,m}"
+      crash_ss.source_files = "YDAvoidCrashKit/YDAvoidCrash/**/*"
       crash_ss.dependency 'YDAvoidCrashKit/YDLogger'
   end
   
   spec.subspec 'YDMonitor' do |crash_ss|
-      crash_ss.source_files = 'YDAvoidCrashKit/YDMonitor/*', "YDAvoidCrashKit/YDMonitor/**/*.{h,m}"
+      crash_ss.source_files = "YDAvoidCrashKit/YDMonitor/**/*"
   end
   
   spec.static_framework = true
