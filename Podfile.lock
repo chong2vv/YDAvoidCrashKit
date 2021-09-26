@@ -1,7 +1,11 @@
 PODS:
-  - YDAvoidCrashKit (0.0.5):
-    - YDAvoidCrashKit/YDLogger (= 0.0.5)
-  - YDAvoidCrashKit/YDLogger (0.0.5)
+  - YDAvoidCrashKit (0.0.6):
+    - YDAvoidCrashKit/YDAvoidCrash (= 0.0.6)
+    - YDAvoidCrashKit/YDLogger (= 0.0.6)
+    - YDAvoidCrashKit/YDMonitor (= 0.0.6)
+  - YDAvoidCrashKit/YDAvoidCrash (0.0.6)
+  - YDAvoidCrashKit/YDLogger (0.0.6)
+  - YDAvoidCrashKit/YDMonitor (0.0.6)
 
 DEPENDENCIES:
   - YDAvoidCrashKit (from `./YDAvoidCrashKit/YDAvoidCrashKit.podspec`)
@@ -11,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "./YDAvoidCrashKit/YDAvoidCrashKit.podspec"
 
 SPEC CHECKSUMS:
-  YDAvoidCrashKit: eacc64ab99ed44e282fa2757413e11511af097d8
+  YDAvoidCrashKit: 70b2bb8396cdf75ba469f3f86d663a9fc6a1b334
 
 PODFILE CHECKSUM: 43db46e05a66ddd0718130387d5ee18d1d9ce72b
 
-COCOAPODS: 1.11.0.beta.2
+COCOAPODS: 1.10.0

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDAvoidCrashKit"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "防崩溃、性能检测等"
 
   spec.homepage     = "https://github.com/chong2vv/YDAvoidCrashKit"
@@ -25,10 +25,19 @@ Pod::Spec.new do |spec|
   spec.source_files = "YDAvoidCrashKit/**/*.{h,m}","YDAvoidCrashKit/*.{h,m}"
   spec.public_header_files = "YDAvoidCrashKit/*.h","YDAvoidCrashKit/**/*.h", "YDAvoidCrashKit/**/**/*.h"
   
-  spec.subspec 'YDLogger' do |ss|
-      ss.libraries = 'c++'
-      ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
+  spec.subspec 'YDLogger' do |log_ss|
+      log_ss.libraries = 'c++'
+      log_ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
   end
+  
+  spec.subspec 'YDAvoidCrash' do |crash_ss|
+      crash_ss.source_files = 'YDAvoidCrashKit/YDAvoidCrash/*', "YDAvoidCrashKit/YDAvoidCrash/**/*.{h,m}"
+  end
+  
+  spec.subspec 'YDMonitor' do |crash_ss|
+      crash_ss.source_files = 'YDAvoidCrashKit/YDMonitor/*', "YDAvoidCrashKit/YDMonitor/**/*.{h,m}"
+  end
+  
   spec.static_framework = true
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"
