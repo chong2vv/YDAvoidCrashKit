@@ -53,12 +53,6 @@ id autoAddMethod(id self, SEL _cmd) {
     
 #ifdef DEBUG
 //    NSString *message = [NSString stringWithFormat:@"%@ __ unrecognized selector: %@",self ,NSStringFromSelector(_cmd)];
-//    NSString *callStackMessage = [YDCallStack YDCallStackWithType:YDCallStackTypeCurrent];
-//    NSDictionary *messageInfo = @{
-//        @"selector_mesaage":message,
-//        @"call_stack_message":callStackMessage
-//    };
-//    YDLogDebug(@"%@",messageInfo);
     
 #endif
     
