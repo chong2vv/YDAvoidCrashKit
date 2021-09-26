@@ -15,6 +15,10 @@
 		1511DA7C26FB5715008DF760 /* YDLogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1511DA7B26FB5715008DF760 /* YDLogService.m */; };
 		152E911B26FDDE20007DD43A /* YDLogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E911A26FDDE20007DD43A /* YDLogListViewController.m */; };
 		152E911E26FDDE29007DD43A /* YDLogPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E911D26FDDE29007DD43A /* YDLogPreviewViewController.m */; };
+		152E920227007DB9007DD43A /* YDMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E920127007DB9007DD43A /* YDMainThread.m */; };
+		152E920827008097007DD43A /* YDThreadSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E920727008097007DD43A /* YDThreadSafeMutableArray.m */; };
+		152E920B270080B3007DD43A /* YDThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E920A270080B3007DD43A /* YDThreadSafeMutableDictionary.m */; };
+		152E920E270085A7007DD43A /* YDThreadSafeMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E920D270085A7007DD43A /* YDThreadSafeMutableSet.m */; };
 		1574FE0326F20E520046F07F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0226F20E520046F07F /* AppDelegate.m */; };
 		1574FE0626F20E520046F07F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0526F20E520046F07F /* SceneDelegate.m */; };
 		1574FE0926F20E520046F07F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE0826F20E520046F07F /* ViewController.m */; };
@@ -87,6 +91,15 @@
 		152E911C26FDDE29007DD43A /* YDLogPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDLogPreviewViewController.h; sourceTree = "<group>"; };
 		152E911D26FDDE29007DD43A /* YDLogPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDLogPreviewViewController.m; sourceTree = "<group>"; };
 		152E911F270046C5007DD43A /* YDLoggerUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDLoggerUI.h; sourceTree = "<group>"; };
+		152E91FF27007D97007DD43A /* YDSafeThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDSafeThread.h; sourceTree = "<group>"; };
+		152E920027007DB9007DD43A /* YDMainThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDMainThread.h; sourceTree = "<group>"; };
+		152E920127007DB9007DD43A /* YDMainThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDMainThread.m; sourceTree = "<group>"; };
+		152E920627008097007DD43A /* YDThreadSafeMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDThreadSafeMutableArray.h; sourceTree = "<group>"; };
+		152E920727008097007DD43A /* YDThreadSafeMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDThreadSafeMutableArray.m; sourceTree = "<group>"; };
+		152E9209270080B3007DD43A /* YDThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDThreadSafeMutableDictionary.h; sourceTree = "<group>"; };
+		152E920A270080B3007DD43A /* YDThreadSafeMutableDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDThreadSafeMutableDictionary.m; sourceTree = "<group>"; };
+		152E920C270085A7007DD43A /* YDThreadSafeMutableSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDThreadSafeMutableSet.h; sourceTree = "<group>"; };
+		152E920D270085A7007DD43A /* YDThreadSafeMutableSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDThreadSafeMutableSet.m; sourceTree = "<group>"; };
 		1574FDFE26F20E520046F07F /* YDKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE0126F20E520046F07F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1574FE0226F20E520046F07F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -213,6 +226,22 @@
 			path = YDLoggerUI;
 			sourceTree = "<group>";
 		};
+		152E91FE27007D47007DD43A /* YDSafeThread */ = {
+			isa = PBXGroup;
+			children = (
+				152E91FF27007D97007DD43A /* YDSafeThread.h */,
+				152E920027007DB9007DD43A /* YDMainThread.h */,
+				152E920127007DB9007DD43A /* YDMainThread.m */,
+				152E920627008097007DD43A /* YDThreadSafeMutableArray.h */,
+				152E920727008097007DD43A /* YDThreadSafeMutableArray.m */,
+				152E9209270080B3007DD43A /* YDThreadSafeMutableDictionary.h */,
+				152E920A270080B3007DD43A /* YDThreadSafeMutableDictionary.m */,
+				152E920C270085A7007DD43A /* YDThreadSafeMutableSet.h */,
+				152E920D270085A7007DD43A /* YDThreadSafeMutableSet.m */,
+			);
+			path = YDSafeThread;
+			sourceTree = "<group>";
+		};
 		1574FDF526F20E520046F07F = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +306,7 @@
 		15CC3BEE26F43EF50089F133 /* YDAvoidCrashKit */ = {
 			isa = PBXGroup;
 			children = (
+				152E91FE27007D47007DD43A /* YDSafeThread */,
 				152E911526FDDDCF007DD43A /* YDLoggerUI */,
 				1511DA6D26FB274A008DF760 /* YDLogger */,
 				15CC3BEF26F43EF50089F133 /* YDAvoidCrash */,
@@ -552,12 +582,15 @@
 				1511DA6C26FB1FD7008DF760 /* YDCallStackModel.m in Sources */,
 				15CC3C3126F43EF50089F133 /* NSObject+YDAvoidCrash.m in Sources */,
 				1574FE1426F20E550046F07F /* main.m in Sources */,
+				152E920B270080B3007DD43A /* YDThreadSafeMutableDictionary.m in Sources */,
 				1511DA7026FB2885008DF760 /* YDMmapLogger.cpp in Sources */,
+				152E920E270085A7007DD43A /* YDThreadSafeMutableSet.m in Sources */,
 				15CC3C2626F43EF50089F133 /* NSArray+YDAvoidCrash.m in Sources */,
 				15CC3C2A26F43EF50089F133 /* NSMutableOrderedSet+YDAvoidCrash.m in Sources */,
 				15CC3C2726F43EF50089F133 /* NSMutableAttributedString+YDAvoidCrash.m in Sources */,
 				15CC3C3226F43EF50089F133 /* CALayer+YDAvoidCrash.m in Sources */,
 				15CC3C2D26F43EF50089F133 /* NSMutableSet+YDAvoidCrash.m in Sources */,
+				152E920227007DB9007DD43A /* YDMainThread.m in Sources */,
 				15CC3C2F26F43EF50089F133 /* NSMutableDictionary+YDAvoidCrash.m in Sources */,
 				15CC3C2226F43EF50089F133 /* NSObject+YDAvoidCrashRunTime.m in Sources */,
 				15CC3C2426F43EF50089F133 /* NSOrderedSet+YDAvoidCrash.m in Sources */,
@@ -566,6 +599,7 @@
 				1511DA7C26FB5715008DF760 /* YDLogService.m in Sources */,
 				1574FE0626F20E520046F07F /* SceneDelegate.m in Sources */,
 				15CC3C3A26F442BB0089F133 /* YDCallStack.m in Sources */,
+				152E920827008097007DD43A /* YDThreadSafeMutableArray.m in Sources */,
 				15CC3C2E26F43EF50089F133 /* NSString+YDAvoidCrash.m in Sources */,
 				15CC3C2526F43EF50089F133 /* NSAttributedString+YDAvoidCrash.m in Sources */,
 				1511DA7926FB54FD008DF760 /* YDMmapLogSwizzeling.m in Sources */,

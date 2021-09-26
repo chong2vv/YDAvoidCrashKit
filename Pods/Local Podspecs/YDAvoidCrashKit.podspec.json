@@ -1,6 +1,6 @@
 {
   "name": "YDAvoidCrashKit",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "summary": "防崩溃、性能检测等",
   "homepage": "https://github.com/chong2vv/YDAvoidCrashKit",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/chong2vv/YDAvoidCrashKit.git",
-    "tag": "0.0.8"
+    "tag": "0.0.9"
   },
   "source_files": "YDAvoidCrashKit/*",
   "static_framework": true,
@@ -51,6 +51,10 @@
     {
       "name": "YDMonitor",
       "source_files": "YDAvoidCrashKit/YDMonitor/**/*"
+    },
+    {
+      "name": "YDSafeThread",
+      "source_files": "YDAvoidCrashKit/YDSafeThread/**/*"
     }
   ]
 }

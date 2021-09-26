@@ -44,6 +44,10 @@ Pod::Spec.new do |spec|
       crash_ss.source_files = "YDAvoidCrashKit/YDMonitor/**/*"
   end
   
+  spec.subspec 'YDSafeThread' do |safe_thread_ss|
+      safe_thread_ss.source_files = "YDAvoidCrashKit/YDSafeThread/**/*"
+  end
+  
   spec.static_framework = true
   spec.requires_arc = true
   spec.frameworks = "Foundation", "UIKit"

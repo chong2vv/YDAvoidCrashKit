@@ -13,5 +13,6 @@
 
 //YDLogger UI库 可快速查看本地的YDLog信息
 #import "YDLoggerUI.h"
+#import "YDSafeThread.h"
 
 
