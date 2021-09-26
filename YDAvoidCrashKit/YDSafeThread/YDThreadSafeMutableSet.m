@@ -79,4 +79,39 @@ dispatch_semaphore_signal(self->_lock);
     LOCK([_set setSet:otherSet]);
 }
 
+- (BOOL)containsObject:(id)anObject {
+    return LOCK([_set containsObject: anObject]);
+}
+
+- (BOOL)isEqual:(id)object {
+    if (object == self) return YES;
+    
+    if ([object isKindOfClass:YDThreadSafeMutableSet.class]) {
+        YDThreadSafeMutableSet *other = object;
+        BOOL isEqual;
+        dispatch_semaphore_wait(self->_lock, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(other->_lock, DISPATCH_TIME_FOREVER);
+        isEqual = [_set isEqual:other->_set];
+        dispatch_semaphore_signal(other->_lock);
+        dispatch_semaphore_signal(self->_lock);
+        return isEqual;
+    }
+    return NO;
+}
+
+- (BOOL)isEqualToSet:(NSSet *)otherSet {
+    if (otherSet == self) return YES;
+    
+    if ([otherSet isKindOfClass:YDThreadSafeMutableSet.class]) {
+        YDThreadSafeMutableSet *other = (id)otherSet;
+        BOOL isEqual;
+        dispatch_semaphore_wait(self->_lock, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(other->_lock, DISPATCH_TIME_FOREVER);
+        isEqual = [_set isEqual:other->_set];
+        dispatch_semaphore_signal(other->_lock);
+        dispatch_semaphore_signal(self->_lock);
+        return isEqual;
+    }
+    return NO;
+}
 @end
