@@ -7,7 +7,6 @@
 
 #import "YDUnrecognizedSelectorSolveObject.h"
 #import <objc/runtime.h>
-#import "YDCallStack.h"
 #import "YDLogService.h"
 
 @interface YDUnrecognizedSelectorSolveObject ()
@@ -53,13 +52,13 @@ id autoAddMethod(id self, SEL _cmd) {
     //可以在此加入日志信息，栈信息的获取等，方便后面分析和改进原来的代码。
     
 #ifdef DEBUG
-    NSString *message = [NSString stringWithFormat:@"%@ __ unrecognized selector: %@",self ,NSStringFromSelector(_cmd)];
-    NSString *callStackMessage = [YDCallStack YDCallStackWithType:YDCallStackTypeCurrent];
-    NSDictionary *messageInfo = @{
-        @"selector_mesaage":message,
-        @"call_stack_message":callStackMessage
-    };
-    YDLogDebug(@"%@",messageInfo);
+//    NSString *message = [NSString stringWithFormat:@"%@ __ unrecognized selector: %@",self ,NSStringFromSelector(_cmd)];
+//    NSString *callStackMessage = [YDCallStack YDCallStackWithType:YDCallStackTypeCurrent];
+//    NSDictionary *messageInfo = @{
+//        @"selector_mesaage":message,
+//        @"call_stack_message":callStackMessage
+//    };
+//    YDLogDebug(@"%@",messageInfo);
     
 #endif
     
