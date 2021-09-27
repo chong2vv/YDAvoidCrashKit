@@ -17,7 +17,7 @@ YDAvoidCrash 主要借鉴了[@chenfanfang](https://github.com/chenfanfang)大神
 ### 使用CocoaPods导入
 
 ```
-pod 'YDAvoidCrashKit', '0.0.9'
+pod 'YDAvoidCrashKit'
 ```
 ### 使用方法
 
