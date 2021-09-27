@@ -31,6 +31,19 @@
     return self;
 }
 
+- (BOOL)creatThread:(NSString *)threadName Task:(YDLoopTask)Task {
+    if (self.threadDict[threadName]) return NO;//线程已经存在
+    self.threadDict[threadName] = [[YDLoopThread alloc] initWithName:threadName];
+    return YES;
+}
+
+- (BOOL)creatThread:(NSString *)threadName Task:(YDLoopTask)Task Complete:(YDCompleteTask)Complete {
+    if (self.threadDict[threadName]) return NO;//线程已经存在
+    self.threadDict[threadName] = [[YDLoopThread alloc] initWithName:threadName];
+    
+    return YES;
+}
+
 - (YDThreadSafeMutableDictionary *)threadDict {
     if (!_threadDict) {
         _threadDict = [[YDThreadSafeMutableDictionary alloc] init];
