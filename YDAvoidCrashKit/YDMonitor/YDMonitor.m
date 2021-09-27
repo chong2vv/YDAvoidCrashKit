@@ -8,7 +8,7 @@
 #import "YDMonitor.h"
 #import "YDCPUInfo.h"
 #import "YDCallStack.h"
-#import "YDAvoidCrashKit.h"
+#import "YDLogService.h"
 
 #define key_stackStr    @"stackStr" //完整堆栈信息
 #define key_isStuck     @"isStuck" //是否被卡住
