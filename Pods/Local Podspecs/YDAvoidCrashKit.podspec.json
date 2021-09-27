@@ -45,12 +45,20 @@
       "dependencies": {
         "YDAvoidCrashKit/YDLogger": [
 
+        ],
+        "YDAvoidCrashKit/YDSafeThread": [
+
         ]
       }
     },
     {
       "name": "YDMonitor",
-      "source_files": "YDAvoidCrashKit/YDMonitor/**/*"
+      "source_files": "YDAvoidCrashKit/YDMonitor/**/*",
+      "dependencies": {
+        "YDAvoidCrashKit/YDLogger": [
+
+        ]
+      }
     },
     {
       "name": "YDSafeThread",

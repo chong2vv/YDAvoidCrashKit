@@ -69,5 +69,12 @@ pod 'YDAvoidCrashKit', '0.0.9'
  [self.navigationController pushViewController:vc animated:YES];
 ```
 
+## 更新
+#### v0.1.0
+
+1. 新增卡顿检测组件YDMonitor辅助优化项目
+2. 新增安全线程及数据操作组件YDSafeThread
+3. 增加UIView主线程刷新UI防护
+
 ## 写在最后的话
 一个人的精力是有限的，如果你发现了哪些常用的Foundation中的方法存在潜在崩溃的危险，而这个框架中没有进行处理，希望你能 issue, 我将添加到YDAvoidCrash中，同时在使用过程中发现BUG或者有更好的解决方法也同样欢迎你能issue，我将万分感谢！

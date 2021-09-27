@@ -38,6 +38,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'YDAvoidCrash' do |crash_ss|
       crash_ss.source_files = "YDAvoidCrashKit/YDAvoidCrash/**/*"
       crash_ss.dependency 'YDAvoidCrashKit/YDLogger'
+      crash_ss.dependency 'YDAvoidCrashKit/YDSafeThread'
   end
   
   spec.subspec 'YDMonitor' do |monitor_ss|
