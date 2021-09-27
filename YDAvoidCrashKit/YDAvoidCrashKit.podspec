@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'YDLogger' do |log_ss|
       log_ss.libraries = 'c++'
-      log_ss.source_files = 'YDAvoidCrashKit/YDLogger/*', "YDAvoidCrashKit/YDLogger/**/*.{h,m}"
+      log_ss.source_files = "YDAvoidCrashKit/YDLogger/**/*"
   end
   
   spec.subspec 'YDLoggerUI' do |logui_ss|
