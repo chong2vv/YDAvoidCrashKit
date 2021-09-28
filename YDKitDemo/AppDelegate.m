@@ -27,6 +27,7 @@
     }];
     [YDAvoidCrash becomeAllEffectiveWithLogger:YES];
     
+    [[YDMonitor shared] beginMonitor];
     return YES;
 }
 

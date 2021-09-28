@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YDCPUInfo.h"
+#import "YDCallStack.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
