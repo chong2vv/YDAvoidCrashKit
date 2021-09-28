@@ -9,6 +9,7 @@ YDAvoidCrash 主要借鉴了[@chenfanfang](https://github.com/chenfanfang)大神
 - 新增YDLogger日志采集系统，用以捕捉崩溃等日志（如操作日志、错误日志、请求日志等），同时YDLogger自带YDLoggerUI可以方便可视化查询日志；
 - 新增卡顿检测组件YDMonitor辅助优化项目;
 - 新增安全线程及数据操作组件YDSafeThread;
+- 新增线程池管理;
 - YDLogger日志是通过每次启动APP即可生成当前的日志文件，可以通过获取全部文件后进行压缩等形式上次服务端，同时可以下载后通过YDLoggerUI进行快速查看;
 - 增加UI刷新防护，防止异步线程刷新UI导致的问题。
 
@@ -73,6 +74,11 @@ pod 'YDAvoidCrashKit'
 ```
 
 ## 更新
+
+#### v0.1.1
+
+1. 安全线程新增线程池YDSafeThreadPool管理常驻线程
+
 #### v0.1.0
 
 1. 新增卡顿检测组件YDMonitor辅助优化项目
