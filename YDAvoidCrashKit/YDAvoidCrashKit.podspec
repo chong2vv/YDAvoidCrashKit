@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDAvoidCrashKit"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "防崩溃、性能检测等"
 
   spec.homepage     = "https://github.com/chong2vv/YDAvoidCrashKit"
@@ -48,6 +48,11 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'YDSafeThread' do |safe_thread_ss|
       safe_thread_ss.source_files = "YDAvoidCrashKit/YDSafeThread/**/*"
+  end
+  
+  spec.subspec 'YDTimer' do |timer_ss|
+      timer_ss.source_files = "YDAvoidCrashKit/YDTimer/**/*"
+      timer_ss.dependency 'YDAvoidCrashKit/YDSafeThread'
   end
   
   spec.static_framework = true

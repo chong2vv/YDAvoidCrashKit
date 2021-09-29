@@ -29,6 +29,7 @@
 		1574FE1426F20E550046F07F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE1326F20E550046F07F /* main.m */; };
 		1574FE1E26F20E550046F07F /* YDKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE1D26F20E550046F07F /* YDKitDemoTests.m */; };
 		1574FE2926F20E550046F07F /* YDKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1574FE2826F20E550046F07F /* YDKitDemoUITests.m */; };
+		15850C5527049FF6002F79B5 /* YDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15850C5227049FE3002F79B5 /* YDTimer.m */; };
 		15B5F0322700B12A00EDE949 /* YDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B5F0312700B12A00EDE949 /* YDMonitor.m */; };
 		15CB1E3126FF3B09005B8314 /* NSData+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1E3026FF3B09005B8314 /* NSData+YDAvoidCrash.m */; };
 		15CB1E3426FF40A8005B8314 /* NSMutableData+YDAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CB1E3326FF40A7005B8314 /* NSMutableData+YDAvoidCrash.m */; };
@@ -122,6 +123,8 @@
 		1574FE2426F20E550046F07F /* YDKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE2826F20E550046F07F /* YDKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDKitDemoUITests.m; sourceTree = "<group>"; };
 		1574FE2A26F20E550046F07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15850C5227049FE3002F79B5 /* YDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTimer.m; sourceTree = "<group>"; };
+		15850C5327049FE3002F79B5 /* YDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTimer.h; sourceTree = "<group>"; };
 		15B5F0302700B12A00EDE949 /* YDMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDMonitor.h; sourceTree = "<group>"; };
 		15B5F0312700B12A00EDE949 /* YDMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDMonitor.m; sourceTree = "<group>"; };
 		15CB1E2F26FF3B09005B8314 /* NSData+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YDAvoidCrash.h"; sourceTree = "<group>"; };
@@ -313,16 +316,26 @@
 			path = YDKitDemoUITests;
 			sourceTree = "<group>";
 		};
+		15850C5127049FE3002F79B5 /* YDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				15850C5327049FE3002F79B5 /* YDTimer.h */,
+				15850C5227049FE3002F79B5 /* YDTimer.m */,
+			);
+			path = YDTimer;
+			sourceTree = "<group>";
+		};
 		15CC3BEE26F43EF50089F133 /* YDAvoidCrashKit */ = {
 			isa = PBXGroup;
 			children = (
+				15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */,
+				15CC3C1926F43EF50089F133 /* YDAvoidCrashKit.h */,
+				15850C5127049FE3002F79B5 /* YDTimer */,
 				152E91FE27007D47007DD43A /* YDSafeThread */,
 				152E911526FDDDCF007DD43A /* YDLoggerUI */,
 				1511DA6D26FB274A008DF760 /* YDLogger */,
 				15CC3BEF26F43EF50089F133 /* YDAvoidCrash */,
 				15CC3C1826F43EF50089F133 /* YDMonitor */,
-				15CC3C1926F43EF50089F133 /* YDAvoidCrashKit.h */,
-				15CC3C2026F43EF50089F133 /* YDAvoidCrashKit.podspec */,
 			);
 			path = YDAvoidCrashKit;
 			sourceTree = "<group>";
@@ -581,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15850C5527049FF6002F79B5 /* YDTimer.m in Sources */,
 				15CB1E3426FF40A8005B8314 /* NSMutableData+YDAvoidCrash.m in Sources */,
 				15CC3C2B26F43EF50089F133 /* UIView+YDAvoidCrash.m in Sources */,
 				15CB1E3126FF3B09005B8314 /* NSData+YDAvoidCrash.m in Sources */,

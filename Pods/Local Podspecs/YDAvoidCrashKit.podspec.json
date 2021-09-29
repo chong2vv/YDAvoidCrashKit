@@ -60,6 +60,15 @@
     {
       "name": "YDSafeThread",
       "source_files": "YDAvoidCrashKit/YDSafeThread/**/*"
+    },
+    {
+      "name": "YDTimer",
+      "source_files": "YDAvoidCrashKit/YDTimer/**/*",
+      "dependencies": {
+        "YDAvoidCrashKit/YDSafeThread": [
+
+        ]
+      }
     }
   ]
 }

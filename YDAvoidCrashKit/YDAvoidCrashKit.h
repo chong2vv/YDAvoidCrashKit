@@ -27,3 +27,6 @@
 
 //卡顿监测（包括CPU使用率），监控结果可以再YDLog中查看
 #import "YDMonitor.h"
+
+//计时器，使用YDThreadSafeMutableDictionary管理
+#import "YDTimer.h"

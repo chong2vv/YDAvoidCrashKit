@@ -5,6 +5,7 @@ PODS:
     - YDAvoidCrashKit/YDLoggerUI (= 0.1.1)
     - YDAvoidCrashKit/YDMonitor (= 0.1.1)
     - YDAvoidCrashKit/YDSafeThread (= 0.1.1)
+    - YDAvoidCrashKit/YDTimer (= 0.1.1)
   - YDAvoidCrashKit/YDAvoidCrash (0.1.1):
     - YDAvoidCrashKit/YDLogger
     - YDAvoidCrashKit/YDSafeThread
@@ -14,6 +15,8 @@ PODS:
   - YDAvoidCrashKit/YDMonitor (0.1.1):
     - YDAvoidCrashKit/YDLogger
   - YDAvoidCrashKit/YDSafeThread (0.1.1)
+  - YDAvoidCrashKit/YDTimer (0.1.1):
+    - YDAvoidCrashKit/YDSafeThread
 
 DEPENDENCIES:
   - YDAvoidCrashKit (from `./YDAvoidCrashKit/YDAvoidCrashKit.podspec`)
@@ -23,7 +26,7 @@ EXTERNAL SOURCES:
     :path: "./YDAvoidCrashKit/YDAvoidCrashKit.podspec"
 
 SPEC CHECKSUMS:
-  YDAvoidCrashKit: b89b78bc543d18f10d413ea0eda576ab3a914c81
+  YDAvoidCrashKit: 6991b32aabd4057823d36c738d3fd45f45996be1
 
 PODFILE CHECKSUM: 43db46e05a66ddd0718130387d5ee18d1d9ce72b
 

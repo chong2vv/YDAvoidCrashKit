@@ -75,6 +75,9 @@ pod 'YDAvoidCrashKit'
 
 ## 更新
 
+#### v0.1.2
+1. 新增YDTimer计时器
+
 #### v0.1.1
 
 1. 安全线程新增线程池YDSafeThreadPool管理常驻线程
