@@ -28,7 +28,7 @@
     [_dateFormatter setDateStyle:NSDateFormatterFullStyle];
     [_dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
+    self.title = @"YDLogger";
     self.view.backgroundColor = [UIColor whiteColor];
     [self configUI];
 }
@@ -63,7 +63,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *filePath = [self.logList objectAtIndex:indexPath.row];
+    NSArray *array = [filePath componentsSeparatedByString:@"/"];
+    NSString *logName = [array lastObject];
+    NSString *title = [[logName componentsSeparatedByString:@"-"] objectAtIndex:1];
+    
     YDLogPreviewViewController *vc = [[YDLogPreviewViewController alloc] initWithLogFilePath:filePath];
+    vc.title = [self _dateStringFormTimeStamp:title];
     if (self.navigationController) {
         [self.navigationController pushViewController:vc animated:YES];
     }else{
