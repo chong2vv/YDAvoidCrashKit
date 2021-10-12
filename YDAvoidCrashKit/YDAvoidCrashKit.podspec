@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDAvoidCrashKit"
-  spec.version      = "0.1.4"
+  spec.version      = "0.1.5"
   spec.summary      = "防崩溃、性能检测等"
 
   spec.homepage     = "https://github.com/chong2vv/YDAvoidCrashKit"

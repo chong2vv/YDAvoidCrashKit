@@ -115,7 +115,7 @@ void yd_signalHandler (int sig)
 
 - (instancetype)init {
     if (self = [super init]) {
-        _fileName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+        _fileName = @"YDLogger";
         _filePath = [self filePathWithName:_fileName];
         const char *filePath = [_filePath UTF8String];
         
@@ -127,7 +127,7 @@ void yd_signalHandler (int sig)
 #endif
         
         _logThread = [[NSThread alloc] initWithTarget:self selector:@selector(_openThread) object:nil];
-        [_logThread setName:@"com.Hayden.YDLogThread"];
+        [_logThread setName:@"com.WYD.YDLogThread"];
         // 设置线程栈空间大小
         _logThread.stackSize = 1024 * 1024;
         [_logThread start];
