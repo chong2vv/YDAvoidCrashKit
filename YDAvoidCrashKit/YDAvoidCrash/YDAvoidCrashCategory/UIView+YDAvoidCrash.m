@@ -23,13 +23,13 @@
         [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setBounds:) method2Sel:@selector(avoidCrashSetBounds:)];
         [NSObject exchangeClassMethod:[self class] method1Sel:@selector(removeFromSuperview) method2Sel:@selector(avoidRemoveFromSuperview)];
         
-        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setNeedsLayout) method2Sel:@selector(avoidSetNeedsLayout)];
-        
-        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(layoutIfNeeded) method2Sel:@selector(avoidLayoutIfNeeded)];
-        
-        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(layoutSubviews) method2Sel:@selector(avoidLayoutSubviews)];
-        
-        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setNeedsUpdateConstraints) method2Sel:@selector(avoidSetNeedsUpdateConstraints)];
+//        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setNeedsLayout) method2Sel:@selector(avoidSetNeedsLayout)];
+//        
+//        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(layoutIfNeeded) method2Sel:@selector(avoidLayoutIfNeeded)];
+//        
+//        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(layoutSubviews) method2Sel:@selector(avoidLayoutSubviews)];
+//        
+//        [NSObject exchangeInstanceMethod:[self class] method1Sel:@selector(setNeedsUpdateConstraints) method2Sel:@selector(avoidSetNeedsUpdateConstraints)];
     });
 }
 
@@ -73,56 +73,56 @@
 /**
  众所周知，UI在子线程中刷新也是一个高频的异常场景，这里会hook视图刷新的几个方法判断是否在主线程操作，如果否会回调主线程
  */
-- (void)avoidSetNeedsLayout {
-    yd_dispatch_async_main_safe(^{
-        @try {
-            [self avoidSetNeedsLayout];
-        } @catch (NSException *exception) {
-            NSString *defaultToDo = AvoidCrashDefaultIgnore;
-            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
-        } @finally {
-            
-        }
-        
-    });
-}
-
-- (void)avoidLayoutIfNeeded {
-    yd_dispatch_async_main_safe(^{
-        @try {
-            [self avoidLayoutIfNeeded];
-        } @catch (NSException *exception) {
-            NSString *defaultToDo = AvoidCrashDefaultIgnore;
-            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
-        } @finally {
-            
-        }
-    });
-}
-
-- (void)avoidLayoutSubviews {
-    yd_dispatch_async_main_safe(^{
-        @try {
-            [self avoidLayoutSubviews];
-        } @catch (NSException *exception) {
-            NSString *defaultToDo = AvoidCrashDefaultIgnore;
-            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
-        } @finally {
-            
-        }
-    });
-}
-
-- (void)avoidSetNeedsUpdateConstraints {
-    yd_dispatch_async_main_safe(^{
-        @try {
-            [self avoidSetNeedsUpdateConstraints];
-        } @catch (NSException *exception) {
-            NSString *defaultToDo = AvoidCrashDefaultIgnore;
-            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
-        } @finally {
-            
-        }
-    });
-}
+//- (void)avoidSetNeedsLayout {
+//    yd_dispatch_async_main_safe(^{
+//        @try {
+//            [self avoidSetNeedsLayout];
+//        } @catch (NSException *exception) {
+//            NSString *defaultToDo = AvoidCrashDefaultIgnore;
+//            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
+//        } @finally {
+//            
+//        }
+//        
+//    });
+//}
+//
+//- (void)avoidLayoutIfNeeded {
+//    yd_dispatch_async_main_safe(^{
+//        @try {
+//            [self avoidLayoutIfNeeded];
+//        } @catch (NSException *exception) {
+//            NSString *defaultToDo = AvoidCrashDefaultIgnore;
+//            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
+//        } @finally {
+//            
+//        }
+//    });
+//}
+//
+//- (void)avoidLayoutSubviews {
+//    yd_dispatch_async_main_safe(^{
+//        @try {
+//            [self avoidLayoutSubviews];
+//        } @catch (NSException *exception) {
+//            NSString *defaultToDo = AvoidCrashDefaultIgnore;
+//            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
+//        } @finally {
+//            
+//        }
+//    });
+//}
+//
+//- (void)avoidSetNeedsUpdateConstraints {
+//    yd_dispatch_async_main_safe(^{
+//        @try {
+//            [self avoidSetNeedsUpdateConstraints];
+//        } @catch (NSException *exception) {
+//            NSString *defaultToDo = AvoidCrashDefaultIgnore;
+//            [YDAvoidCrash noteErrorWithException:exception defaultToDo:defaultToDo];
+//        } @finally {
+//            
+//        }
+//    });
+//}
 @end
