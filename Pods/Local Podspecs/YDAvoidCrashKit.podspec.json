@@ -1,6 +1,6 @@
 {
   "name": "YDAvoidCrashKit",
-  "version": "0.1.1",
+  "version": "0.1.8",
   "summary": "防崩溃、性能检测等",
   "homepage": "https://github.com/chong2vv/YDAvoidCrashKit",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/chong2vv/YDAvoidCrashKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.8"
   },
   "source_files": "YDAvoidCrashKit/*",
   "static_framework": true,

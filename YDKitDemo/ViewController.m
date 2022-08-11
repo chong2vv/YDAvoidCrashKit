@@ -21,6 +21,7 @@
     [showLogBt setTitle:@"显示logDemo" forState:UIControlStateNormal];
     [showLogBt addTarget:self action:@selector(showLogVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:showLogBt];
+    
 }
 
 - (void)showLogVC {
