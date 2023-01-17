@@ -94,6 +94,13 @@
 
 
 /**
+ Debug模式下是否显示弹窗，默认显示
+ @param enable 是否显示，默认YES
+ */
++ (void)enableDebugAlert:(BOOL)enable;
+
+
+/**
  * 以 avoidCrash_ 加模块名命名用于其它模块对各自 crash的处理
  */
 //- (void)avoidCrash_模块名

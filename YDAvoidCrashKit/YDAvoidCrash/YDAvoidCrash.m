@@ -30,10 +30,13 @@ static void(^YDAvoidCrashBlock)(NSException *exception,NSString *defaultToDo,BOO
 
 @property (class, nonatomic, copy) NSArray <NSString *> *enableMethodPrefixList;
 
+@property (class, nonatomic, assign) BOOL showAlert;
+
 @end
 
 @implementation YDAvoidCrash
 static NSArray *_enableMethodPrefixList = nil;
+static BOOL _showAlert = true;
 /**
  * 设置信息回掉收集
  */
@@ -189,6 +192,8 @@ static NSArray *_enableMethodPrefixList = nil;
                                    key_currentThread    : currentThread
                                    };
     
+    if(!YDAvoidCrash.showAlert) return;
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *message = [NSString stringWithFormat:@"%@",errorInfoDic];
         
@@ -208,6 +213,10 @@ static NSArray *_enableMethodPrefixList = nil;
     });
 #endif
     
+}
+
++ (void)enableDebugAlert:(BOOL)enable {
+    YDAvoidCrash.showAlert = enable;
 }
 
 + (NSString*)getCurrentTimes{
@@ -272,6 +281,16 @@ static NSArray *_enableMethodPrefixList = nil;
     }
     
     return mainCallStackSymbolMsg;
+}
+
++ (void)setShowAlert:(BOOL)showAlert {
+    if(showAlert != _showAlert) {
+        _showAlert = showAlert;
+    }
+}
+
++ (BOOL)showAlert {
+    return _showAlert;
 }
 
 + (NSArray<NSString *> *)enableMethodPrefixList {
