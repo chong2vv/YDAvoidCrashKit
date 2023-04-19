@@ -133,3 +133,4 @@ Pods/
 Podfile.lock
 .DS_Store
 iOSInjectionProject/
+.idea/
