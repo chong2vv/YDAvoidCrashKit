@@ -295,7 +295,7 @@ static BOOL _showAlert = true;
 
 + (NSArray<NSString *> *)enableMethodPrefixList {
     if (_enableMethodPrefixList == nil) {
-        _enableMethodPrefixList = @[@"NS",@"YD"];
+        _enableMethodPrefixList = @[@"NS",@"YD",@"UI",@"CA"];
     }
     return _enableMethodPrefixList;
 }

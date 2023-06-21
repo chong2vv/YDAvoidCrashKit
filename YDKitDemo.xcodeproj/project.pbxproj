@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,7 +67,7 @@
 		152E92132701E9BF007DD43A /* YDLoopThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDLoopThread.m; sourceTree = "<group>"; };
 		1574FDFE26F20E520046F07F /* YDKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574FE0126F20E520046F07F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1574FE0226F20E520046F07F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1574FE0226F20E520046F07F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; wrapsLines = 0; };
 		1574FE0426F20E520046F07F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		1574FE0526F20E520046F07F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		1574FE0726F20E520046F07F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		15850C5327049FE3002F79B5 /* YDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTimer.h; sourceTree = "<group>"; };
 		15B5F0302700B12A00EDE949 /* YDMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDMonitor.h; sourceTree = "<group>"; };
 		15B5F0312700B12A00EDE949 /* YDMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDMonitor.m; sourceTree = "<group>"; };
-		15C5BD5928AC8D9E00E5B1EC /* YDAvoidCrashKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = YDAvoidCrashKit.podspec; sourceTree = SOURCE_ROOT; };
+		15C5BD5928AC8D9E00E5B1EC /* YDAvoidCrashKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = YDAvoidCrashKit.podspec; sourceTree = SOURCE_ROOT; };
 		15CB1E3226FF40A7005B8314 /* NSMutableData+YDAvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+YDAvoidCrash.h"; sourceTree = "<group>"; };
 		15CB1E3326FF40A7005B8314 /* NSMutableData+YDAvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+YDAvoidCrash.m"; sourceTree = "<group>"; };
 		15CC3BF026F43EF50089F133 /* YDAvoidCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDAvoidCrash.m; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 				};
 			};
 			buildConfigurationList = 1574FDF926F20E520046F07F /* Build configuration list for PBXProject "YDKitDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
