@@ -1,7 +1,7 @@
 # YDAvoidCrashKit
 
 ## 写在前面的话
-很抱歉没有及时更新YDAvoidCrash库，主要是考虑到本来想做的轻便一些，但是后续发现冗余的有些多，所以重新拆分了一下，以及针对原有的bug做了修复，建议之后使用新的[YDPreventCrash]https://github.com/chong2vv/YDPreventCrash，使用方式及命名和本库保持一致，可以较为轻易的更换。
+很抱歉没有及时更新YDAvoidCrash库，主要是考虑到本来想做的轻便一些，但是后续发现冗余的有些多，所以重新拆分了一下，以及针对原有的bug做了修复，建议之后使用新的[YDPreventCrash](https://github.com/chong2vv/YDPreventCrash)，使用方式及命名和本库保持一致，可以较为轻易的更换。
 
 ## YDAvoidCrash 防崩溃库介绍
 YDAvoidCrash 主要借鉴了[@chenfanfang](https://github.com/chenfanfang)大神开源的 [AvoidCrash](https://github.com/chenfanfang/AvoidCrash)。由于AvoidCrash不再维护更新，同时鉴于实际业务开发中所使用的类逐渐增加，因此YDAvoidCrash在原AvoidCrash上重新开发。毕竟，一个已经发布到AppStore上的App，最忌讳的就是崩溃问题，相信作为开发者对于所产出项目的崩溃率要求都极为严格，因此YDAvoidCrash库就是为此存在。
